@@ -1,0 +1,11 @@
+---
+- hosts: 192.168.0.69
+  tasks:
+    - name: get thumbprint
+      command: /bin/nsxcli -c get certificate api thumbprint
+      register: key
+   
+    - name: debug test 
+      command: echo hello world {{thumb}} 
+      with_items:
+       - { thumb: "{{key.stdout_lines}}" }            

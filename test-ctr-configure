@@ -1,0 +1,5 @@
+- hosts: 127.0.0.1
+  vars_files:
+   - /root/ansible/var.yml
+  roles:
+     - { role: CtrConfigure }

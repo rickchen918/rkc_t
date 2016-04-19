@@ -1,0 +1,4 @@
+--- 
+
+- name: Connectivity Testing Among MP/CP Nodes
+  ping:

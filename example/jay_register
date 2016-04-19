@@ -1,0 +1,89 @@
+---
+
+- name: retrive manager thumbprints
+  command: su admin -c 'get certificate api thumbprint'
+  register: managerthumb
+  delegate_to: '{{ item.mgmtip }}'
+  with_items:
+    - '{{ manager01 }}'
+    - '{{ manager02 }}'
+    - '{{ manager03 }}'
+
+- name: form manager cluster
+  command: >
+    su admin -c 'join management-cluster {{ item.ip }}
+    username admin
+    password {{ nsx.passwd }}
+    thumbprint {{ item.thumb }}'
+  delegate_to: '{{ manager01.mgmtip }}'
+  with_items:
+    - { ip: '{{ manager02.mgmtip }}', thumb: "{{ managerthumb.results.1.stdout }}" }
+    - { ip: '{{ manager03.mgmtip }}', thumb: "{{ managerthumb.results.2.stdout }}" }
+
+- name: set controller shared secret
+  command: >
+    su admin -c 'set control-cluster security-model shared-secret
+    secret {{ nsx.passwd }}'
+  delegate_to: '{{ item.mgmtip }}'
+  with_items:
+    - '{{ controller01 }}'
+    - '{{ controller02 }}'
+    - '{{ controller03 }}'
+
+- name: retrieve controller thumbprints
+  command: su admin -c 'get control-cluster certificate thumbprint'
+  register: controllerthumb
+  delegate_to: '{{ item.mgmtip }}'
+  with_items:
+    - '{{ controller01 }}'
+    - '{{ controller02 }}'
+    - '{{ controller03 }}'
+
+- name: Join nodes to manager cluster
+  command: >
+    su admin -c 'join management-plane {{ manager01.mgmtip }}
+    username admin
+    password {{ nsx.passwd }}
+    thumbprint {{ managerthumb.results.0.stdout }}'
+  delegate_to: '{{ item.mgmtip }}'
+  with_items:
+    - '{{ controller01 }}'
+    - '{{ controller02 }}'
+    - '{{ controller03 }}'
+    - '{{ edge01 }}'
+    - '{{ edge02 }}'
+
+- name: initialize controller01
+  command: su admin -c 'initialize control-cluster'
+  delegate_to: '{{ controller01.mgmtip }}'
+
+- name: form controller cluster
+  command: >
+    su admin -c 'join control-cluster {{ item.ip }}
+    thumbprint {{ item.thumb }}'
+  with_items:
+    - { ip: '{{ controller02.mgmtip }}', thumb: '{{ controllerthumb.results.1.stdout }}' }
+    - { ip: '{{ controller03.mgmtip }}', thumb: '{{ controllerthumb.results.2.stdout }}' }
+  delegate_to: '{{ controller01.mgmtip }}'
+
+- name: activate controller01
+  command: >
+    su admin -c 'activate control-cluster'
+  delegate_to: '{{ controller01.mgmtip }}'
+
+- pause: prompt='Wait for 1 minute, then press <Enter> to continue'
+
+- name: activate controller02
+  command: >
+    su admin -c 'activate control-cluster'
+  delegate_to: '{{ controller02.mgmtip }}'
+
+- pause: prompt='Wait for 1 minute, then press <Enter> to continue'
+
+- name: activate controller03
+  command: >
+    su admin -c 'activate control-cluster'
+  delegate_to: '{{ controller03.mgmtip }}'
+
+- pause: prompt='Wait for 1 minute, then press <Enter> to continue'
+

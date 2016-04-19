@@ -1,0 +1,4 @@
+---
+
+- hosts: mgrs 
+  vars_file: /root/ansible/var.yml

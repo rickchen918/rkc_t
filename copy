@@ -1,0 +1,9 @@
+# this is prepared to ship nsx vib to hosts 
+---
+- hosts: transport
+  tasks:
+   - name: copy nsx vib file to esx 
+     copy: src=/root/ansible/nsx-lcp-1.0.0.0.0.3636408-esx60.zip dest=/tmp/nsx-lcp-1.0.0.0.0.3636408-esx60.zip
+
+   - name: host preparation 
+     command: esxcli software vib install -d /tmp/nsx-lcp-1.0.0.0.0.3636408-esx60.zip

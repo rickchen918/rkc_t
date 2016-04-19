@@ -1,0 +1,27 @@
+--- 
+- name: wait for system up 
+  wait_for: host={{mgr3_ip}} port=22 delay=60 state=started
+
+- name: mgr1 ping test 
+  command: ping -c 3 {{mgr1_ip}}
+
+- name: mgr2 ping test
+  command: ping -c 3 {{mgr2_ip}}
+
+- name: mgr3 ping test 
+  command: ping -c 3 {{mgr3_ip}}
+
+- name: ctr1 ping test
+  command: ping -c 3 {{ctr1_ip}}
+
+- name: ctr2 ping test
+  command: ping -c 3 {{ctr2_ip}}
+
+- name: ctr3 ping test
+  command: ping -c 3 {{ctr3_ip}}
+
+- name: edge1 ping test 
+  command: ping -c 3 {{edge1_ip}} 
+
+- name: edge2 ping test 
+  command: ping -c 3 {{edge2_ip}}

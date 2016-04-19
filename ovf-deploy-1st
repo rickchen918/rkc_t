@@ -1,0 +1,10 @@
+ovftool \
+--name=ansible-ctr --X:injectOvfEnv --X:logFile=ovftool.log --allowExtraConfig \
+--datastore="nsx_lab" --network="VM Network" --acceptAllEulas --noSSLVerify \
+--diskMode=thin --powerOn --prop:nsx_ip_0=192.168.0.105 --prop:nsx_netmask_0=255.255.255.0 \
+--prop:nsx_gateway_0=192.168.0.1 --prop:nsx_dns1_0=192.168.0.96 --prop:nsx_domain_0=nvp.com \
+--prop:nsx_ntp_0=192.168.0.58 --prop:nsx_isSSHEnabled=True \
+--prop:nsx_allowSSHRootLogin=True --prop:nsx_passwd_0=nicira123 \
+--prop:nsx_cli_passwd_0=nicira --prop:nsx_hostname=ansible-controller \
+nsx-controller-1.0.0.0.0.3540153.ova \
+vi://administrator@vsphere.local:'Nicira123$'@192.168.0.85/DC/host/lab

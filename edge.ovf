@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ovf:Envelope xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns="http://schemas.dmtf.org/ovf/envelope/1" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vmw="http://www.vmware.com/schema/ovf">
+  <References>
+    <File ovf:href="nsx-edge.vmdk" ovf:size="331489280" ovf:id="nsx-edge.vmdk_id"/>
+  </References>
+  <DeploymentOptionSection>
+    <Info>The list of deployment options</Info>
+    <Configuration ovf:id="small">
+      <Label ovf:msgid="config.small.label">Small</Label>
+      <Description ovf:msgid="config.small.description">
+IMPORTANT: This configuration is intended for proof-of-concept or test environments and should not be used in a production environment.
+
+This configuration requires the following:
+* 2 vCPU
+* 4GB RAM
+* 120GB Storage
+* VM hardware version 10 or greater (vSphere 5.5 or greater)
+      </Description>
+    </Configuration>
+    <Configuration ovf:id="medium" ovf:default="true">
+      <Label ovf:msgid="config.medium.label">Medium</Label>
+      <Description ovf:msgid="config.medium.description">
+This configuration requires the following:
+* 4 vCPU
+* 8GB RAM
+* 120GB Storage
+* VM hardware version 10 or greater (vSphere 5.5 or greater)
+      </Description>
+    </Configuration>
+    <Configuration ovf:id="large">
+      <Label ovf:msgid="config.large.label">Large</Label>
+      <Description ovf:msgid="config.large.description">
+This configuration requires the following:
+* 8 vCPU
+* 16GB RAM
+* 120GB Storage
+* VM hardware version 10 or greater (vSphere 5.5 or greater)
+      </Description>
+    </Configuration>
+  </DeploymentOptionSection>
+  <NetworkSection>
+    <Info>List of logical networks used in the package</Info>
+    <Network ovf:name="Network 0">
+      <Description>Network 0</Description>
+    </Network>
+    <Network ovf:name="Network 1">
+      <Description>Network 1</Description>
+    </Network>
+    <Network ovf:name="Network 2">
+      <Description>Network 2</Description>
+    </Network>
+    <Network ovf:name="Network 3">
+      <Description>Network 3</Description>
+    </Network>
+  </NetworkSection>
+  <vmw:IpAssignmentSection ovf:required="false" vmw:protocols="IPv4,IPv6" vmw:schemes="">
+    <Info>Supported IP assignment schemes</Info>
+  </vmw:IpAssignmentSection>
+  <DiskSection>
+    <Info>List of the virtual disks and partitions needed</Info>
+    <Disk ovf:diskId="system" ovf:capacity="122880" ovf:capacityAllocationUnits="byte * 2^20" ovf:format="http://www.vmware.com/interfaces/specifications/vmdk.html#streamOptimized" ovf:fileRef="nsx-edge.vmdk_id" ovf:populatedSize="1030094848"/>
+  </DiskSection>
+  <VirtualSystem ovf:id="nsx-edge">
+    <Info>A virtual machine</Info>
+    <ProductSection ovf:required="false">
+      <Info>VM ISV branding information</Info>
+      <Product>nsx-edge</Product>
+      <Vendor>VMware, Inc</Vendor>
+      <!--
+            Version is the actual product version in the
+            form X.X.X.X where X is an unsigned 16-bit integer.
+
+            FullVersion is a descriptive version string
+            including, for example, alpha or beta designations
+            and other release criteria.
+        -->
+      <Version>1.0.0.0</Version>
+      <FullVersion>1.0.0.0.0.3640291</FullVersion>
+      <ProductUrl/>
+      <VendorUrl/>
+      <AppUrl>http://${vami.ip0.nsx-edge}/</AppUrl>
+      <Category>Application</Category>
+      <Property ovf:key="nsx_passwd_0" ovf:type="string" ovf:userConfigurable="true" ovf:qualifiers="MinLen(1)" ovf:password="true">
+        <Label ovf:msgid="root.user.password.label">System Root User Password</Label>
+        <Description ovf:msgid="root.user.password.desc">The password for root user for this VM.
+                                                       Please follow the password complexity rule as below:
+                                                       - Min of 8 characters
+                                                       - &gt;=1 lower case letter
+                                                       - &gt;=1 upper case letter
+                                                       - &gt;=1 number digit
+                                                       - &gt;=1 special char
+                                                       NOTE: Password strength validation will occur during VM boot. If the password
+                                                       does not meet the above criteria then login as root user for the change password
+                                                       prompt to appear.
+      </Description>
+      </Property>
+      <Property ovf:key="nsx_cli_passwd_0" ovf:type="string" ovf:userConfigurable="true" ovf:qualifiers="MinLen(1)" ovf:password="true">
+        <Label ovf:msgid="cli.user.password.label">CLI "admin" User Password</Label>
+        <Description ovf:msgid="cli.user.password.desc">The password for default CLI user for this VM.
+                                                      Please follow the password complexity rule as below:
+                                                      - Min of 8 characters
+                                                      - &gt;=1 lower case letter
+                                                      - &gt;=1 upper case letter
+                                                      - &gt;=1 number digit
+                                                      - &gt;=1 special char
+                                                      NOTE: Password strength validation will occur during VM boot. If the password
+                                                      does not meet the above criteria then login as admin user for the change password
+                                                      prompt to appear.
+      </Description>
+      </Property>
+      <Category ovf:msgid="network.ipv4.category">Network properties</Category>
+      <Property ovf:key="nsx_hostname" ovf:type="string" ovf:userConfigurable="true">
+        <Label ovf:msgid="hostname.label">Hostname</Label>
+        <Description ovf:msgid="hostname.desc">The hostname for this VM.</Description>
+      </Property>
+      <Property ovf:key="nsx_gateway_0" ovf:type="string" ovf:userConfigurable="true">
+        <Label ovf:msgid="network.ipv4.gateway.label">Default IPv4 Gateway</Label>
+        <Description ovf:msgid="network.ipv4.gateway.desc">The default gateway for this VM.</Description>
+      </Property>
+      <Property ovf:key="nsx_ip_0" ovf:type="string" ovf:userConfigurable="true">
+        <Label ovf:msgid="network.ipv4.address.label">Management Network IPv4 Address</Label>
+        <Description ovf:msgid="network.ipv4.address.desc">The IPv4 Address for the first interface.</Description>
+      </Property>
+      <Property ovf:key="nsx_netmask_0" ovf:type="string" ovf:userConfigurable="true">
+        <Label ovf:msgid="network.ipv4.netmask.label">Management Network Netmask</Label>
+        <Description ovf:msgid="network.ipv4.netmask.desc">The netmask for the first interface.</Description>
+      </Property>
+      <Category ovf:msgid="dns.category">DNS</Category>
+      <Property ovf:key="nsx_dns1_0" ovf:type="string" ovf:userConfigurable="true">
+        <Label ovf:msgid="dns.primary.label">DNS Server list</Label>
+        <Description ovf:msgid="dns.primary.desc">The DNS server list(space separated) for this VM.</Description>
+      </Property>
+      <Property ovf:key="nsx_domain_0" ovf:type="string" ovf:userConfigurable="true">
+        <Label ovf:msgid="dns.domain.label">Domain Search List</Label>
+        <Description ovf:msgid="dns.domain.desc">The domain Search list(space separated) for this VM.</Description>
+      </Property>
+      <Category ovf:msgid="services.configuration.category">Services Configuration</Category>
+      <Property ovf:key="nsx_ntp_0" ovf:type="string" ovf:userConfigurable="true">
+        <Label ovf:msgid="ntp.label">NTP Server List</Label>
+        <Description ovf:msgid="ntp.desc">The NTP server list(space separated) for this VM.</Description>
+      </Property>
+      <Property ovf:key="nsx_isSSHEnabled" ovf:value="false" ovf:type="boolean" ovf:userConfigurable="true">
+        <Label ovf:msgid="ssh.label">Enable SSH</Label>
+        <Description ovf:msgid="ssh.desc">Enabling SSH service is not recommended for security reasons.</Description>
+      </Property>
+      <Property ovf:key="nsx_allowSSHRootLogin" ovf:value="false" ovf:type="boolean" ovf:userConfigurable="true">
+        <Label ovf:msgid="ssh.label">Allow root SSH logins</Label>
+        <Description ovf:msgid="ssh.desc">Allowing root SSH logins is not recommended for security reasons.</Description>
+      </Property>
+    </ProductSection>
+    <ProductSection ovf:class="vami" ovf:instance="nsx-edge" ovf:required="false">
+      <Info>VAMI Properties</Info>
+    </ProductSection>
+    <ProductSection ovf:class="vm" ovf:required="false">
+      <Info>VM specific properties</Info>
+    </ProductSection>
+    <AnnotationSection>
+      <Info/>
+      <Annotation/>
+    </AnnotationSection>
+    <OperatingSystemSection ovf:id="94" ovf:version="" vmw:osType="ubuntu64Guest">
+      <Info>Guest Operating System</Info>
+      <Description>Ubuntu 12.04 64bit</Description>
+    </OperatingSystemSection>
+    <VirtualHardwareSection ovf:transport="com.vmware.guestInfo" ovf:required="false">
+      <Info>Virtual Hardware Requirements</Info>
+      <System>
+        <vssd:ElementName>Virtual Hardware Family</vssd:ElementName>
+        <vssd:InstanceID>0</vssd:InstanceID>
+        <vssd:VirtualSystemType>vmx-11 vmx-10</vssd:VirtualSystemType>
+      </System>
+      <Item ovf:configuration="small">
+        <rasd:AllocationUnits>hertz * 10^6</rasd:AllocationUnits>
+        <rasd:Description>Number of virtual CPUs</rasd:Description>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">2 virtual CPU</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">1</rasd:InstanceID>
+        <rasd:ResourceType>3</rasd:ResourceType>
+        <rasd:VirtualQuantity>2</rasd:VirtualQuantity>
+      </Item>
+      <Item ovf:configuration="medium">
+        <rasd:AllocationUnits>hertz * 10^6</rasd:AllocationUnits>
+        <rasd:Description>Number of virtual CPUs</rasd:Description>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">4 virtual CPU</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">1</rasd:InstanceID>
+        <rasd:ResourceType>3</rasd:ResourceType>
+        <rasd:VirtualQuantity>4</rasd:VirtualQuantity>
+      </Item>
+      <Item ovf:configuration="large">
+        <rasd:AllocationUnits>hertz * 10^6</rasd:AllocationUnits>
+        <rasd:Description>Number of virtual CPUs</rasd:Description>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">8 virtual CPU</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">1</rasd:InstanceID>
+        <rasd:ResourceType>3</rasd:ResourceType>
+        <rasd:VirtualQuantity>8</rasd:VirtualQuantity>
+      </Item>
+      <Item ovf:configuration="small">
+        <rasd:AllocationUnits>byte * 2^20</rasd:AllocationUnits>
+        <rasd:Description>Memory Size</rasd:Description>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">4096 MB of memory</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">2</rasd:InstanceID>
+        <rasd:ResourceType>4</rasd:ResourceType>
+        <rasd:VirtualQuantity>4096</rasd:VirtualQuantity>
+      </Item>
+      <Item ovf:configuration="medium">
+        <rasd:AllocationUnits>byte * 2^20</rasd:AllocationUnits>
+        <rasd:Description>Memory Size</rasd:Description>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">8192 MB of memory</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">2</rasd:InstanceID>
+        <rasd:ResourceType>4</rasd:ResourceType>
+        <rasd:VirtualQuantity>8192</rasd:VirtualQuantity>
+      </Item>
+      <Item ovf:configuration="large">
+        <rasd:AllocationUnits>byte * 2^20</rasd:AllocationUnits>
+        <rasd:Description>Memory Size</rasd:Description>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">16384 MB of memory</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">2</rasd:InstanceID>
+        <rasd:ResourceType>4</rasd:ResourceType>
+        <rasd:VirtualQuantity>16384</rasd:VirtualQuantity>
+      </Item>
+      <Item>
+        <rasd:Address xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">0</rasd:Address>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">SCSI Controller 0  - lsilogic</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">3</rasd:InstanceID>
+        <rasd:ResourceSubType>lsilogic</rasd:ResourceSubType>
+        <rasd:ResourceType>6</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:AddressOnParent>0</rasd:AddressOnParent>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">Harddisk 1</rasd:ElementName>
+        <rasd:HostResource>ovf:/disk/system</rasd:HostResource>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">4</rasd:InstanceID>
+        <rasd:Parent>3</rasd:Parent>
+        <rasd:ResourceType>17</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:AutomaticAllocation>true</rasd:AutomaticAllocation>
+        <rasd:Connection>Network 0</rasd:Connection>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">Ethernet adapter 0</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">5</rasd:InstanceID>
+        <rasd:ResourceSubType>VmxNet3</rasd:ResourceSubType>
+        <rasd:ResourceType>10</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:AutomaticAllocation>true</rasd:AutomaticAllocation>
+        <rasd:Connection>Network 1</rasd:Connection>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">Ethernet adapter 1</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">6</rasd:InstanceID>
+        <rasd:ResourceSubType>VmxNet3</rasd:ResourceSubType>
+        <rasd:ResourceType>10</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:AutomaticAllocation>true</rasd:AutomaticAllocation>
+        <rasd:Connection>Network 2</rasd:Connection>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">Ethernet adapter 2</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">7</rasd:InstanceID>
+        <rasd:ResourceSubType>VmxNet3</rasd:ResourceSubType>
+        <rasd:ResourceType>10</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:AutomaticAllocation>true</rasd:AutomaticAllocation>
+        <rasd:Connection>Network 3</rasd:Connection>
+        <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">Ethernet adapter 3</rasd:ElementName>
+        <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">8</rasd:InstanceID>
+        <rasd:ResourceSubType>VmxNet3</rasd:ResourceSubType>
+        <rasd:ResourceType>10</rasd:ResourceType>
+      </Item>
+      <vmw:Config ovf:required="false" vmw:key="tools.syncTimeWithHost" vmw:value="false"/>
+      <vmw:ExtraConfig vmw:key="time.synchronize.continue" vmw:value="false"/>
+      <vmw:ExtraConfig vmw:key="time.synchronize.restore" vmw:value="false"/>
+      <vmw:ExtraConfig vmw:key="time.synchronize.resume.disk" vmw:value="false"/>
+      <vmw:ExtraConfig vmw:key="time.synchronize.shrink" vmw:value="false"/>
+      <vmw:ExtraConfig vmw:key="time.synchronize.tools.startup" vmw:value="false"/>
+	<vmw:ExtraConfig vmw:key="sched.mem.pin" vmw:value="TRUE"/>
+	<vmw:ExtraConfig vmw:key="RemoteDisplay.maxConnections" vmw:value="1"/>
+    </VirtualHardwareSection>
+  </VirtualSystem>
+</ovf:Envelope>

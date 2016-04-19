@@ -1,0 +1,93 @@
+---
+
+ansible_ssh_user: root
+ansible_ssh_pass: VMware1!
+
+ovf:
+  controller: 'nsx-controller-1.0.0.0.0.{{ controllerbuild }}.ovf'
+  manager: 'nsx-manager-1.0.0.0.0.{{ managerbuild }}.ovf'
+  edge: 'nsx-edge-1.0.0.0.0.{{ edgebuild }}.ovf'
+
+nsx:
+  dns: '10.34.35.11 10.34.45.11'
+  ntp: '10.166.17.90 10.166.17.91'
+  passwd: 'VMware1!'
+  domain: 'vmware.com eng.vmware.com mhos.eng.vmware.com'
+  size: 'large'
+
+vc:
+  server: 'mgmt-vcenter01.mhos.eng.vmware.com'
+  username: 'administrator@vsphere.local'
+  passwd: 'VMware1!'
+  dc: 'mhos-mgmt'
+  cluster: 'mgmt01'
+  datastore: 'mgmt01-vsan'
+
+controller01:
+  hostname: 'nsx-controller01'
+  mgmtip: '10.38.201.30'
+  mgmtnetmask: '255.255.255.0'
+  mgmtgw: '10.38.201.1'
+  mgmtpg: 'vlan3000_vm'
+  ovf: '{{ ovf.controller }}'
+
+controller02:
+  hostname: 'nsx-controller02'
+  mgmtip: '10.38.201.31'
+  mgmtnetmask: '255.255.255.0'
+  mgmtgw: '10.38.201.1'
+  mgmtpg: 'vlan3000_vm'
+  ovf: '{{ ovf.controller }}'
+
+controller03:
+  hostname: 'nsx-controller03'
+  mgmtip: '10.38.201.32'
+  mgmtnetmask: '255.255.255.0'
+  mgmtgw: '10.38.201.1'
+  mgmtpg: 'vlan3000_vm'
+  ovf: '{{ ovf.controller }}'
+
+manager01:
+  hostname: 'nsx-manager01'
+  mgmtip: '10.38.201.33'
+  mgmtnetmask: '255.255.255.0'
+  mgmtgw: '10.38.201.1'
+  mgmtpg: 'vlan3000_vm'
+  ovf: '{{ ovf.manager }}'
+
+manager02:
+  hostname: 'nsx-manager02'
+  mgmtip: '10.38.201.34'
+  mgmtnetmask: '255.255.255.0'
+  mgmtgw: '10.38.201.1'
+  mgmtpg: 'vlan3000_vm'
+  ovf: '{{ ovf.manager }}'
+
+manager03:
+  hostname: 'nsx-manager03'
+  mgmtip: '10.38.201.35'
+  mgmtnetmask: '255.255.255.0'
+  mgmtgw: '10.38.201.1'
+  mgmtpg: 'vlan3000_vm'
+  ovf: '{{ ovf.manager }}'
+
+edge01:
+  hostname: 'nsx-edge01'
+  mgmtip: '10.38.201.36'
+  mgmtnetmask: '255.255.255.0'
+  mgmtgw: '10.38.201.1'
+  mgmtpg: 'vlan3000_vm'
+  extpg: 'vlan3001_provider'
+  transportpg: 'vlan3008_transport'
+  ovf: '{{ ovf.edge }}'
+
+edge02:
+  hostname: 'nsx-edge02'
+  mgmtip: '10.38.201.37'
+  mgmtnetmask: '255.255.255.0'
+  mgmtgw: '10.38.201.1'
+  mgmtpg: 'vlan3000_vm'
+  extpg: 'vlan3001_provider'
+  transportpg: 'vlan3008_transport'
+  ovf: '{{ ovf.edge }}'
+y

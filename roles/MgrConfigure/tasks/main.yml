@@ -1,0 +1,66 @@
+--- 
+
+- name: remove existing hostkey storing 
+  file: path=~/.ssh/known_hosts state=absent
+
+- name: verify service up and running 
+  wait_for: host={{mgr2_ip}} port=7070 state=present delay=120
+
+- name: get thumbprint for nsx manager2 
+  command: /bin/nsxcli -c get certificate api thumbprint 
+  register: key2
+  delegate_to: "{{mgr2_ip}}"
+
+- name: get nsx manager 2 into cluster
+  command: /bin/nsxcli -c join management-cluster {{mgr2_ip}}  username admin password {{passwd}} thumbprint {{ item.thumb2 }}
+  delegate_to: "{{mgr1_ip}}"
+  with_items:
+   - { thumb2: "{{key2.stdout}}" }
+
+- name: get thumbprint for nsx manager3
+  command: /bin/nsxcli -c get certificate api thumbprint
+  register: key3
+  delegate_to: "{{mgr3_ip}}"
+
+- name: get nsx manager 3 into cluster
+  command: /bin/nsxcli -c join management-cluster {{mgr3_ip}}  username admin password {{passwd}} thumbprint {{ item.thumb3 }}
+  delegate_to: "{{mgr1_ip}}"
+  with_items:
+   - { thumb3: "{{key3.stdout}}" }
+
+- name: verify management cluster status
+  command: /bin/nsxcli -c get management-cluster status
+  register: status 
+  delegate_to: "{{mgr1_ip}}"
+
+
+- name: get controller 1 join to managemet cluster 
+  command: /bin/nsxcli -c join management-plane {{mgr2_ip}}  username admin password Nicira123$ thumbprint {{ item.thumb2 }}
+  delegate_to: "{{ctr1_ip}}"
+  with_items:
+   - { thumb2: "{{key2.stdout}}" }
+  when: status.stdout.find ("Management cluster status':' STABLE")
+
+- name: get controller 2 join to managemet cluster
+  command: /bin/nsxcli -c join management-plane {{mgr2_ip}}  username admin password Nicira123$ thumbprint {{ item.thumb2 }}
+  delegate_to: "{{ctr2_ip}}"
+  with_items:
+   - { thumb2: "{{key2.stdout}}" }
+
+- name: get controller 3 jon to managemet cluster
+  command: /bin/nsxcli -c join management-plane {{mgr2_ip}}  username admin password Nicira123$ thumbprint {{ item.thumb2 }}
+  delegate_to: "{{ctr3_ip}}"
+  with_items:
+   - { thumb2: "{{key2.stdout}}" }
+
+- name: set security model on controller 1
+  command: /bin/nsxcli -c "set control-cluster security-model shared-secret secret {{ctr_shared_secret}}"
+  delegate_to: "{{ctr1_ip}}"
+
+- name: set security model on controller 2
+  command: /bin/nsxcli -c "set control-cluster security-model shared-secret secret {{ctr_shared_secret}}"
+  delegate_to: "{{ctr2_ip}}"
+
+- name: set security model on controller 3
+  command: /bin/nsxcli -c "set control-cluster security-model shared-secret secret {{ctr_shared_secret}}"
+  delegate_to: "{{ctr3_ip}}"

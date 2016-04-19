@@ -1,0 +1,29 @@
+---
+- hosts: 127.0.0.1
+  vars_files: 
+   - /root/ansible/var.yml
+  tasks:
+     - name: starting timw 
+       command: date
+  roles:
+     - { role: MgrDeploy }   
+     - { role: CtrDeploy }	
+     - { role: Check }
+
+- hosts: nsxmgrs
+  vars_files:
+   - /root/ansible/var.yml
+  roles: 
+    - { role: MgrConfigure }
+
+- hosts: nsxctrs
+  vars_files:
+  - /root/ansible/var.yml
+#  roles:
+#    - { role: CtrConfigure }
+
+- hosts: 127.0.0.1
+  vars_files: 
+  - /root/ansible/var.yml
+  roles:
+    - { role: HostKey }

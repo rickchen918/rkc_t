@@ -1,0 +1,27 @@
+---
+- hosts: 127.0.0.1
+  vars_files: 
+   - /root/ansible/var.yml
+  roles:
+     - { role: MgrDeploy }   
+     - { role: CtrDeploy }	
+     - { role: EdgeDeploy }
+     - { role: Check }
+
+- hosts: MCP
+  roles:
+     - { role: Connectivity } 
+
+- hosts: 127.0.0.1
+  vars_files:
+   - /root/ansible/var.yml
+  roles: 
+    - { role: MgrConfigure }
+    - { role: CtrConfigure }
+    - { role: EdgeConfigure }
+
+- hosts: 127.0.0.1
+  vars_files: 
+  - /root/ansible/var.yml
+  roles:
+    - { role: HostKey }

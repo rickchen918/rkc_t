@@ -1,0 +1,5 @@
+- hosts: nsxmgrs
+  vars_files:
+   - /root/ansible/var.yml
+  roles:
+     - { role: MgrConfigure }

@@ -1,0 +1,12 @@
+--- 
+
+- name: verify controller registration status 
+  command: /bin/nsxcli -c get management-cluster status
+  register: status
+  delegate_to: "{{mgr1_ip}}"
+
+- debug: var=status
+
+- name: go or no-go 
+  command: /bin/nsxcli -c activate control-cluster 
+  when: status.stdout.find('Control cluster status":" STABLE') == 1

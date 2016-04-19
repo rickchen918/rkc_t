@@ -1,0 +1,1508 @@
+2016-03-03T15:04:49.210+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] [SSL_DB] Using /root/.ovftool.ssldb as SSL DB
+2016-03-03T15:04:49.231+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Subscribing to signal: 2 (SIGINT)
+2016-03-03T15:04:49.231+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Subscribing to signal: 4 (SIGILL)
+2016-03-03T15:04:49.231+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Subscribing to signal: 6 (SIGABRT)
+2016-03-03T15:04:49.231+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Subscribing to signal: 8 (SIGFPE)
+2016-03-03T15:04:49.231+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Subscribing to signal: 15 (SIGTERM)
+2016-03-03T15:04:49.231+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Subscribing to signal: 1 (SIGHUP)
+2016-03-03T15:04:49.231+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Subscribing to signal: 3 (SIGQUIT)
+2016-03-03T15:04:49.232+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Subscribing to signal: 5 (SIGTRAP)
+2016-03-03T15:04:49.232+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Subscribing to signal: 9 (SIGKILL)
+2016-03-03T15:04:49.232+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Subscribing to signal: 13 (SIGPIPE)
+2016-03-03T15:04:49.232+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Initializing progress
+2016-03-03T15:04:49.232+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] OvfTool Version: VMware ovftool 4.1.0 (build-2459827)
+2016-03-03T15:04:49.232+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Using home directory: ./.ovftool
+2016-03-03T15:04:49.237+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Curl Version: 7.30.0
+2016-03-03T15:04:49.237+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Done initializing libs
+2016-03-03T15:04:49.237+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Determining source
+2016-03-03T15:04:49.238+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Determining target
+2016-03-03T15:04:49.238+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Getting source
+2016-03-03T15:04:49.238+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:04:49.239+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:04:49.240+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Opening source
+2016-03-03T15:04:49.240+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] OvfPackageSourceBase::Open
+2016-03-03T15:04:49.241+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Manifest file present. Parsing file.
+2016-03-03T15:04:49.241+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Manifest file entry: SHA1(nsx-controller.vmdk) = 8767b265c670b9a4fa2edc524ce28c3466137718
+2016-03-03T15:04:49.241+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Certificate file present. Validating content.
+2016-03-03T15:04:49.241+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Certificate found: -----BEGIN CERTIFICATE-----
+--> MIIDyzCCArOgAwIBAgIJAKH7xLtwMqSZMA0GCSqGSIb3DQEBBQUAME0xCzAJBgNV
+--> BAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYDVQQHEwlQYWxvIEFsdG8x
+--> FTATBgNVBAoTDFZNd2FyZSwgSW5jLjAeFw0xMDAyMjYyMjE3NDFaFw0yNjAxMDMy
+--> MjE3NDFaME0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYD
+--> VQQHEwlQYWxvIEFsdG8xFTATBgNVBAoTDFZNd2FyZSwgSW5jLjCCASAwDQYJKoZI
+--> hvcNAQEBBQADggENADCCAQgCggEBALU9NUtC39fqG7yo2XAswUmtli9uA+31uAMw
+--> 9FFHAEv/it8pzBQZ/4r+2bN+GnXOWhuDd1K4ApKMRvoO4LwQfZxrkx4pXrsu0gdb
+--> 4OunHw0D8MrdzSoob8Js/uq+IJ+8Bhsc6b7RzTUt9HeDWzHasAJVgMsjehGt23ay
+--> 9FKOT6dVD6D/Xi3qJnB/4t/XNS6L63dC3ea4guzKDyLaXIP5bf/m56jvVImFjhhT
+--> W2ASbnEUlZIVrEuyVcdG7e3FvZufE553JmHL0YG/0m5bIHXKRzBRx0D3HHOAzOKw
+--> kkOnxJHSTN4Hz8hSYCWvzUAjSYL3Q8qiTd7GHJ2ynsRnu3KlzKUCAQOjga8wgaww
+--> HQYDVR0OBBYEFHg8KQJdm8NPQDmYP41uEgKG+VNwMH0GA1UdIwR2MHSAFHg8KQJd
+--> m8NPQDmYP41uEgKG+VNwoVGkTzBNMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2Fs
+--> aWZvcm5pYTESMBAGA1UEBxMJUGFsbyBBbHRvMRUwEwYDVQQKEwxWTXdhcmUsIElu
+--> Yy6CCQCh+8S7cDKkmTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQCP
+--> nVEBVF2jYEsgaTJ1v17HNTVTD5pBPfbQk/2vYVZEWL20PtJuLeSWwoo5+TnCSp69
+--> i9n1Hpm9JWHjyb1Lba8Xx7VC4FferIyxt0ivRm9l9ouo/pQAR8xyqjTg1qfr5V8S
+--> fZElKbjpzSMPrxLwF77h+YB+YjqWAJpVV+fAkAvK7K9vMiFgW60teZBxVW/XlmG0
+--> IJaSUWSI3/A+bA6fuIy8PMmpQMtm0droHrCnViAVRhMMgEC/doMH1GqUSmoiyQ1G
+--> PifLAp5wV5/HV+S9AGrb8HGdWIvW+kBgmCl0wSf2JFYm1bpq30CVE4EC0MAY1mJG
+--> vSqQGIbCybw5KTCXRQ8d
+--> -----END CERTIFICATE-----
+--> 
+2016-03-03T15:04:49.242+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Using Linux certificate repository: /etc/ssl/certs/ca-certificates.crt
+2016-03-03T15:04:49.242+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Using certificate repository at /usr/lib/vmware-ovftool/certs
+2016-03-03T15:04:49.266+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Referenced file in OVF descriptor does not appear in the manifest file. This is allowed by OVF spec.
+2016-03-03T15:04:49.270+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Verifying that the files references in manifest are valid
+2016-03-03T15:04:49.270+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] OvfPackageSourceBase parsing message bundle
+2016-03-03T15:04:49.272+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Validating files
+2016-03-03T15:04:49.272+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:04:49.272+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:04:49.272+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:04:49.272+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=HttpConnectionPool-000000] HttpConnectionPoolImpl created. maxPoolConnections = 20; idleTimeout = 900000000; maxOpenConnections = 20; maxConnectionAge = 0
+2016-03-03T15:04:49.272+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:04:49.272+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:04:49.273+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:04:49.273+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:04:49.284+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:04:49.284+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:04:49.284+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:04:49.284+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:04:49.308+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:04:49.308+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:04:49.308+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:04:49.312+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=HttpConnectionPool-000001] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:04:53.506+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:05:06.297+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] [SigHandler] Signal caught: 2
+2016-03-03T15:05:08.110+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] [SigHandler] Signal caught: 2
+2016-03-03T15:05:08.355+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] [SigHandler] Signal caught: 2
+2016-03-03T15:05:08.559+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] [SigHandler] Signal caught: 2
+2016-03-03T15:05:08.805+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] [SigHandler] Signal caught: 2
+2016-03-03T15:05:08.986+08:00 verbose -[7F06F39837C0] [Originator@6876 sub=Default] [SigHandler] Signal caught: 2
+2016-03-03T15:06:48.904+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] [SSL_DB] Using /root/.ovftool.ssldb as SSL DB
+2016-03-03T15:06:48.913+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Subscribing to signal: 2 (SIGINT)
+2016-03-03T15:06:48.913+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Subscribing to signal: 4 (SIGILL)
+2016-03-03T15:06:48.913+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Subscribing to signal: 6 (SIGABRT)
+2016-03-03T15:06:48.913+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Subscribing to signal: 8 (SIGFPE)
+2016-03-03T15:06:48.913+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Subscribing to signal: 15 (SIGTERM)
+2016-03-03T15:06:48.913+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Subscribing to signal: 1 (SIGHUP)
+2016-03-03T15:06:48.913+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Subscribing to signal: 3 (SIGQUIT)
+2016-03-03T15:06:48.913+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Subscribing to signal: 5 (SIGTRAP)
+2016-03-03T15:06:48.913+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Subscribing to signal: 9 (SIGKILL)
+2016-03-03T15:06:48.913+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Subscribing to signal: 13 (SIGPIPE)
+2016-03-03T15:06:48.913+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Initializing progress
+2016-03-03T15:06:48.913+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] OvfTool Version: VMware ovftool 4.1.0 (build-2459827)
+2016-03-03T15:06:48.913+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Using home directory: ./.ovftool
+2016-03-03T15:06:48.919+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Curl Version: 7.30.0
+2016-03-03T15:06:48.919+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Done initializing libs
+2016-03-03T15:06:48.919+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Determining source
+2016-03-03T15:06:48.919+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Determining target
+2016-03-03T15:06:48.919+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting source
+2016-03-03T15:06:48.919+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:06:48.920+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:06:48.936+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Opening source
+2016-03-03T15:06:48.936+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] OvfPackageSourceBase::Open
+2016-03-03T15:06:48.936+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Manifest file present. Parsing file.
+2016-03-03T15:06:48.937+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Manifest file entry: SHA1(nsx-controller.vmdk) = 8767b265c670b9a4fa2edc524ce28c3466137718
+2016-03-03T15:06:48.937+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Certificate file present. Validating content.
+2016-03-03T15:06:48.937+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Certificate found: -----BEGIN CERTIFICATE-----
+--> MIIDyzCCArOgAwIBAgIJAKH7xLtwMqSZMA0GCSqGSIb3DQEBBQUAME0xCzAJBgNV
+--> BAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYDVQQHEwlQYWxvIEFsdG8x
+--> FTATBgNVBAoTDFZNd2FyZSwgSW5jLjAeFw0xMDAyMjYyMjE3NDFaFw0yNjAxMDMy
+--> MjE3NDFaME0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYD
+--> VQQHEwlQYWxvIEFsdG8xFTATBgNVBAoTDFZNd2FyZSwgSW5jLjCCASAwDQYJKoZI
+--> hvcNAQEBBQADggENADCCAQgCggEBALU9NUtC39fqG7yo2XAswUmtli9uA+31uAMw
+--> 9FFHAEv/it8pzBQZ/4r+2bN+GnXOWhuDd1K4ApKMRvoO4LwQfZxrkx4pXrsu0gdb
+--> 4OunHw0D8MrdzSoob8Js/uq+IJ+8Bhsc6b7RzTUt9HeDWzHasAJVgMsjehGt23ay
+--> 9FKOT6dVD6D/Xi3qJnB/4t/XNS6L63dC3ea4guzKDyLaXIP5bf/m56jvVImFjhhT
+--> W2ASbnEUlZIVrEuyVcdG7e3FvZufE553JmHL0YG/0m5bIHXKRzBRx0D3HHOAzOKw
+--> kkOnxJHSTN4Hz8hSYCWvzUAjSYL3Q8qiTd7GHJ2ynsRnu3KlzKUCAQOjga8wgaww
+--> HQYDVR0OBBYEFHg8KQJdm8NPQDmYP41uEgKG+VNwMH0GA1UdIwR2MHSAFHg8KQJd
+--> m8NPQDmYP41uEgKG+VNwoVGkTzBNMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2Fs
+--> aWZvcm5pYTESMBAGA1UEBxMJUGFsbyBBbHRvMRUwEwYDVQQKEwxWTXdhcmUsIElu
+--> Yy6CCQCh+8S7cDKkmTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQCP
+--> nVEBVF2jYEsgaTJ1v17HNTVTD5pBPfbQk/2vYVZEWL20PtJuLeSWwoo5+TnCSp69
+--> i9n1Hpm9JWHjyb1Lba8Xx7VC4FferIyxt0ivRm9l9ouo/pQAR8xyqjTg1qfr5V8S
+--> fZElKbjpzSMPrxLwF77h+YB+YjqWAJpVV+fAkAvK7K9vMiFgW60teZBxVW/XlmG0
+--> IJaSUWSI3/A+bA6fuIy8PMmpQMtm0droHrCnViAVRhMMgEC/doMH1GqUSmoiyQ1G
+--> PifLAp5wV5/HV+S9AGrb8HGdWIvW+kBgmCl0wSf2JFYm1bpq30CVE4EC0MAY1mJG
+--> vSqQGIbCybw5KTCXRQ8d
+--> -----END CERTIFICATE-----
+--> 
+2016-03-03T15:06:48.937+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Using Linux certificate repository: /etc/ssl/certs/ca-certificates.crt
+2016-03-03T15:06:48.938+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Using certificate repository at /usr/lib/vmware-ovftool/certs
+2016-03-03T15:06:48.960+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Referenced file in OVF descriptor does not appear in the manifest file. This is allowed by OVF spec.
+2016-03-03T15:06:48.964+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Verifying that the files references in manifest are valid
+2016-03-03T15:06:48.964+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] OvfPackageSourceBase parsing message bundle
+2016-03-03T15:06:48.965+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Validating files
+2016-03-03T15:06:48.966+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:06:48.966+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:06:48.966+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:06:48.966+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=HttpConnectionPool-000000] HttpConnectionPoolImpl created. maxPoolConnections = 20; idleTimeout = 900000000; maxOpenConnections = 20; maxConnectionAge = 0
+2016-03-03T15:06:48.966+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:06:48.966+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:06:48.967+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:06:48.967+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:06:48.981+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:06:48.981+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:06:48.981+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:06:48.981+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:06:49.008+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:06:49.008+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:06:49.008+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:06:49.011+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=HttpConnectionPool-000001] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:06:52.235+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:07:03.268+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:07:03.268+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:07:03.268+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:07:03.269+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:07:03.269+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:07:03.269+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:07:03.269+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:07:03.279+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:07:03.279+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:07:03.280+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:07:03.280+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:07:03.291+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:07:03.291+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:07:03.291+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:07:03.291+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=HttpConnectionPool-000002] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:07:08.371+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:07:09.201+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:07:09.202+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:07:09.202+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:07:09.202+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:07:09.202+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:07:09.203+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:07:09.203+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:07:09.212+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:07:09.212+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:07:09.213+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:07:09.213+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:07:09.224+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:07:09.224+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:07:09.224+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:07:09.224+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=HttpConnectionPool-000003] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:07:12.319+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:07:13.070+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:07:13.070+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:07:13.070+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:07:13.070+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:07:13.070+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:07:13.071+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:07:13.071+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:07:13.081+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:07:13.081+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:07:13.081+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:07:13.081+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:07:13.093+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:07:13.093+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:07:13.093+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:07:13.093+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=HttpConnectionPool-000004] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:07:17.176+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:07:17.177+08:00 verbose -[7F010DEEB7C0] [Originator@6876 sub=Default] Backtrace: 
+--> 
+--> [backtrace begin] product: VMware Workstation, version: e.x.p, build: build-2459827, tag: -
+--> backtrace[00] libvmacore.so[0x003D9C74]: Vmacore::System::Stacktrace::CaptureWork(unsigned int)
+--> backtrace[01] libvmacore.so[0x001DBF37]: Vmacore::System::SystemFactoryImpl::CreateQuickBacktrace(Vmacore::Ref<Vmacore::System::Backtrace>&)
+--> backtrace[02] libvmacore.so[0x0018481D]: Vmacore::Throwable::Throwable(std::string const&)
+--> backtrace[03] ovftool.bin[0x0020E7CC]
+--> backtrace[04] ovftool.bin[0x001F7638]
+--> backtrace[05] ovftool.bin[0x001EE979]
+--> backtrace[06] ovftool.bin[0x001EEB04]
+--> backtrace[07] libc.so.6[0x00021EC5]
+--> backtrace[08] ovftool.bin[0x001626B9]
+--> [backtrace end]
+--> 
+2016-03-03T15:13:47.333+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] [SSL_DB] Using /root/.ovftool.ssldb as SSL DB
+2016-03-03T15:13:47.334+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Subscribing to signal: 2 (SIGINT)
+2016-03-03T15:13:47.334+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Subscribing to signal: 4 (SIGILL)
+2016-03-03T15:13:47.334+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Subscribing to signal: 6 (SIGABRT)
+2016-03-03T15:13:47.334+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Subscribing to signal: 8 (SIGFPE)
+2016-03-03T15:13:47.334+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Subscribing to signal: 15 (SIGTERM)
+2016-03-03T15:13:47.334+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Subscribing to signal: 1 (SIGHUP)
+2016-03-03T15:13:47.334+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Subscribing to signal: 3 (SIGQUIT)
+2016-03-03T15:13:47.334+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Subscribing to signal: 5 (SIGTRAP)
+2016-03-03T15:13:47.334+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Subscribing to signal: 9 (SIGKILL)
+2016-03-03T15:13:47.334+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Subscribing to signal: 13 (SIGPIPE)
+2016-03-03T15:13:47.334+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Initializing progress
+2016-03-03T15:13:47.334+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] OvfTool Version: VMware ovftool 4.1.0 (build-2459827)
+2016-03-03T15:13:47.334+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Using home directory: ./.ovftool
+2016-03-03T15:13:47.340+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Curl Version: 7.30.0
+2016-03-03T15:13:47.340+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Done initializing libs
+2016-03-03T15:13:47.340+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Determining source
+2016-03-03T15:13:47.340+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Determining target
+2016-03-03T15:13:47.340+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting source
+2016-03-03T15:13:47.340+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:13:47.340+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:13:47.341+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Opening source
+2016-03-03T15:13:47.341+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] OvfPackageSourceBase::Open
+2016-03-03T15:13:47.341+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Manifest file present. Parsing file.
+2016-03-03T15:13:47.341+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Manifest file entry: SHA1(nsx-controller.vmdk) = 8767b265c670b9a4fa2edc524ce28c3466137718
+2016-03-03T15:13:47.341+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Certificate file present. Validating content.
+2016-03-03T15:13:47.342+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Certificate found: -----BEGIN CERTIFICATE-----
+--> MIIDyzCCArOgAwIBAgIJAKH7xLtwMqSZMA0GCSqGSIb3DQEBBQUAME0xCzAJBgNV
+--> BAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYDVQQHEwlQYWxvIEFsdG8x
+--> FTATBgNVBAoTDFZNd2FyZSwgSW5jLjAeFw0xMDAyMjYyMjE3NDFaFw0yNjAxMDMy
+--> MjE3NDFaME0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYD
+--> VQQHEwlQYWxvIEFsdG8xFTATBgNVBAoTDFZNd2FyZSwgSW5jLjCCASAwDQYJKoZI
+--> hvcNAQEBBQADggENADCCAQgCggEBALU9NUtC39fqG7yo2XAswUmtli9uA+31uAMw
+--> 9FFHAEv/it8pzBQZ/4r+2bN+GnXOWhuDd1K4ApKMRvoO4LwQfZxrkx4pXrsu0gdb
+--> 4OunHw0D8MrdzSoob8Js/uq+IJ+8Bhsc6b7RzTUt9HeDWzHasAJVgMsjehGt23ay
+--> 9FKOT6dVD6D/Xi3qJnB/4t/XNS6L63dC3ea4guzKDyLaXIP5bf/m56jvVImFjhhT
+--> W2ASbnEUlZIVrEuyVcdG7e3FvZufE553JmHL0YG/0m5bIHXKRzBRx0D3HHOAzOKw
+--> kkOnxJHSTN4Hz8hSYCWvzUAjSYL3Q8qiTd7GHJ2ynsRnu3KlzKUCAQOjga8wgaww
+--> HQYDVR0OBBYEFHg8KQJdm8NPQDmYP41uEgKG+VNwMH0GA1UdIwR2MHSAFHg8KQJd
+--> m8NPQDmYP41uEgKG+VNwoVGkTzBNMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2Fs
+--> aWZvcm5pYTESMBAGA1UEBxMJUGFsbyBBbHRvMRUwEwYDVQQKEwxWTXdhcmUsIElu
+--> Yy6CCQCh+8S7cDKkmTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQCP
+--> nVEBVF2jYEsgaTJ1v17HNTVTD5pBPfbQk/2vYVZEWL20PtJuLeSWwoo5+TnCSp69
+--> i9n1Hpm9JWHjyb1Lba8Xx7VC4FferIyxt0ivRm9l9ouo/pQAR8xyqjTg1qfr5V8S
+--> fZElKbjpzSMPrxLwF77h+YB+YjqWAJpVV+fAkAvK7K9vMiFgW60teZBxVW/XlmG0
+--> IJaSUWSI3/A+bA6fuIy8PMmpQMtm0droHrCnViAVRhMMgEC/doMH1GqUSmoiyQ1G
+--> PifLAp5wV5/HV+S9AGrb8HGdWIvW+kBgmCl0wSf2JFYm1bpq30CVE4EC0MAY1mJG
+--> vSqQGIbCybw5KTCXRQ8d
+--> -----END CERTIFICATE-----
+--> 
+2016-03-03T15:13:47.342+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Using Linux certificate repository: /etc/ssl/certs/ca-certificates.crt
+2016-03-03T15:13:47.342+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Using certificate repository at /usr/lib/vmware-ovftool/certs
+2016-03-03T15:13:47.343+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Referenced file in OVF descriptor does not appear in the manifest file. This is allowed by OVF spec.
+2016-03-03T15:13:47.344+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Verifying that the files references in manifest are valid
+2016-03-03T15:13:47.344+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] OvfPackageSourceBase parsing message bundle
+2016-03-03T15:13:47.345+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Validating files
+2016-03-03T15:13:47.345+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:13:47.345+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:13:47.345+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:13:47.346+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=HttpConnectionPool-000000] HttpConnectionPoolImpl created. maxPoolConnections = 20; idleTimeout = 900000000; maxOpenConnections = 20; maxConnectionAge = 0
+2016-03-03T15:13:47.346+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:13:47.346+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:13:47.346+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrato%40cr%40vsphere.local
+2016-03-03T15:13:47.346+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:13:47.357+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:13:47.357+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:13:47.357+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:13:47.358+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:13:47.370+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:13:47.370+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:13:47.370+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:13:47.371+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=HttpConnectionPool-000001] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:13:52.467+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:14:01.129+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:14:01.129+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:14:01.129+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:14:01.129+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:14:01.129+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:14:01.130+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrato%40cr%40vsphere.local
+2016-03-03T15:14:01.130+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:14:01.142+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:14:01.142+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:14:01.142+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:14:01.142+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:14:01.160+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:14:01.160+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:14:01.160+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:14:01.160+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=HttpConnectionPool-000002] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:14:05.271+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:14:05.874+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:14:05.874+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:14:05.874+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:14:05.874+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:14:05.874+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:14:05.875+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrato%40cr%40vsphere.local
+2016-03-03T15:14:05.875+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:14:05.884+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:14:05.884+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:14:05.885+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:14:05.885+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:14:05.896+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:14:05.896+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:14:05.896+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:14:05.896+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=HttpConnectionPool-000003] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:14:10.949+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:14:11.850+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:14:11.850+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:14:11.850+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:14:11.850+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:14:11.850+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:14:11.851+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrato%40cr%40vsphere.local
+2016-03-03T15:14:11.851+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:14:11.861+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:14:11.861+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:14:11.861+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:14:11.861+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:14:11.873+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:14:11.873+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:14:11.873+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:14:11.874+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=HttpConnectionPool-000004] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:14:15.928+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:14:15.929+08:00 verbose -[7FA0F53147C0] [Originator@6876 sub=Default] Backtrace: 
+--> 
+--> [backtrace begin] product: VMware Workstation, version: e.x.p, build: build-2459827, tag: -
+--> backtrace[00] libvmacore.so[0x003D9C74]: Vmacore::System::Stacktrace::CaptureWork(unsigned int)
+--> backtrace[01] libvmacore.so[0x001DBF37]: Vmacore::System::SystemFactoryImpl::CreateQuickBacktrace(Vmacore::Ref<Vmacore::System::Backtrace>&)
+--> backtrace[02] libvmacore.so[0x0018481D]: Vmacore::Throwable::Throwable(std::string const&)
+--> backtrace[03] ovftool.bin[0x0020E7CC]
+--> backtrace[04] ovftool.bin[0x001F7638]
+--> backtrace[05] ovftool.bin[0x001EE979]
+--> backtrace[06] ovftool.bin[0x001EEB04]
+--> backtrace[07] libc.so.6[0x00021EC5]
+--> backtrace[08] ovftool.bin[0x001626B9]
+--> [backtrace end]
+--> 
+2016-03-03T15:15:24.273+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] [SSL_DB] Using /root/.ovftool.ssldb as SSL DB
+2016-03-03T15:15:24.274+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Subscribing to signal: 2 (SIGINT)
+2016-03-03T15:15:24.274+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Subscribing to signal: 4 (SIGILL)
+2016-03-03T15:15:24.274+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Subscribing to signal: 6 (SIGABRT)
+2016-03-03T15:15:24.274+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Subscribing to signal: 8 (SIGFPE)
+2016-03-03T15:15:24.274+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Subscribing to signal: 15 (SIGTERM)
+2016-03-03T15:15:24.274+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Subscribing to signal: 1 (SIGHUP)
+2016-03-03T15:15:24.274+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Subscribing to signal: 3 (SIGQUIT)
+2016-03-03T15:15:24.274+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Subscribing to signal: 5 (SIGTRAP)
+2016-03-03T15:15:24.274+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Subscribing to signal: 9 (SIGKILL)
+2016-03-03T15:15:24.274+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Subscribing to signal: 13 (SIGPIPE)
+2016-03-03T15:15:24.274+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Initializing progress
+2016-03-03T15:15:24.274+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] OvfTool Version: VMware ovftool 4.1.0 (build-2459827)
+2016-03-03T15:15:24.274+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Using home directory: ./.ovftool
+2016-03-03T15:15:24.280+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Curl Version: 7.30.0
+2016-03-03T15:15:24.280+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Done initializing libs
+2016-03-03T15:15:24.280+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Determining source
+2016-03-03T15:15:24.280+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Determining target
+2016-03-03T15:15:24.280+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting source
+2016-03-03T15:15:24.280+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:15:24.280+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:15:24.281+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Opening source
+2016-03-03T15:15:24.281+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] OvfPackageSourceBase::Open
+2016-03-03T15:15:24.281+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Manifest file present. Parsing file.
+2016-03-03T15:15:24.281+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Manifest file entry: SHA1(nsx-controller.vmdk) = 8767b265c670b9a4fa2edc524ce28c3466137718
+2016-03-03T15:15:24.281+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Certificate file present. Validating content.
+2016-03-03T15:15:24.281+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Certificate found: -----BEGIN CERTIFICATE-----
+--> MIIDyzCCArOgAwIBAgIJAKH7xLtwMqSZMA0GCSqGSIb3DQEBBQUAME0xCzAJBgNV
+--> BAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYDVQQHEwlQYWxvIEFsdG8x
+--> FTATBgNVBAoTDFZNd2FyZSwgSW5jLjAeFw0xMDAyMjYyMjE3NDFaFw0yNjAxMDMy
+--> MjE3NDFaME0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYD
+--> VQQHEwlQYWxvIEFsdG8xFTATBgNVBAoTDFZNd2FyZSwgSW5jLjCCASAwDQYJKoZI
+--> hvcNAQEBBQADggENADCCAQgCggEBALU9NUtC39fqG7yo2XAswUmtli9uA+31uAMw
+--> 9FFHAEv/it8pzBQZ/4r+2bN+GnXOWhuDd1K4ApKMRvoO4LwQfZxrkx4pXrsu0gdb
+--> 4OunHw0D8MrdzSoob8Js/uq+IJ+8Bhsc6b7RzTUt9HeDWzHasAJVgMsjehGt23ay
+--> 9FKOT6dVD6D/Xi3qJnB/4t/XNS6L63dC3ea4guzKDyLaXIP5bf/m56jvVImFjhhT
+--> W2ASbnEUlZIVrEuyVcdG7e3FvZufE553JmHL0YG/0m5bIHXKRzBRx0D3HHOAzOKw
+--> kkOnxJHSTN4Hz8hSYCWvzUAjSYL3Q8qiTd7GHJ2ynsRnu3KlzKUCAQOjga8wgaww
+--> HQYDVR0OBBYEFHg8KQJdm8NPQDmYP41uEgKG+VNwMH0GA1UdIwR2MHSAFHg8KQJd
+--> m8NPQDmYP41uEgKG+VNwoVGkTzBNMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2Fs
+--> aWZvcm5pYTESMBAGA1UEBxMJUGFsbyBBbHRvMRUwEwYDVQQKEwxWTXdhcmUsIElu
+--> Yy6CCQCh+8S7cDKkmTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQCP
+--> nVEBVF2jYEsgaTJ1v17HNTVTD5pBPfbQk/2vYVZEWL20PtJuLeSWwoo5+TnCSp69
+--> i9n1Hpm9JWHjyb1Lba8Xx7VC4FferIyxt0ivRm9l9ouo/pQAR8xyqjTg1qfr5V8S
+--> fZElKbjpzSMPrxLwF77h+YB+YjqWAJpVV+fAkAvK7K9vMiFgW60teZBxVW/XlmG0
+--> IJaSUWSI3/A+bA6fuIy8PMmpQMtm0droHrCnViAVRhMMgEC/doMH1GqUSmoiyQ1G
+--> PifLAp5wV5/HV+S9AGrb8HGdWIvW+kBgmCl0wSf2JFYm1bpq30CVE4EC0MAY1mJG
+--> vSqQGIbCybw5KTCXRQ8d
+--> -----END CERTIFICATE-----
+--> 
+2016-03-03T15:15:24.282+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Using Linux certificate repository: /etc/ssl/certs/ca-certificates.crt
+2016-03-03T15:15:24.282+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Using certificate repository at /usr/lib/vmware-ovftool/certs
+2016-03-03T15:15:24.282+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Referenced file in OVF descriptor does not appear in the manifest file. This is allowed by OVF spec.
+2016-03-03T15:15:24.283+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Verifying that the files references in manifest are valid
+2016-03-03T15:15:24.283+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] OvfPackageSourceBase parsing message bundle
+2016-03-03T15:15:24.284+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Validating files
+2016-03-03T15:15:24.284+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:15:24.285+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:15:24.285+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:15:24.285+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=HttpConnectionPool-000000] HttpConnectionPoolImpl created. maxPoolConnections = 20; idleTimeout = 900000000; maxOpenConnections = 20; maxConnectionAge = 0
+2016-03-03T15:15:24.285+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:15:24.285+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:15:24.286+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:15:24.286+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:15:24.297+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:15:24.297+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:15:24.297+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:15:24.297+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:15:24.310+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:15:24.310+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:15:24.310+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:15:24.310+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=HttpConnectionPool-000001] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:15:29.383+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:15:37.715+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:15:37.716+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:15:37.716+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:15:37.716+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:15:37.716+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:15:37.717+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:15:37.717+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:15:37.727+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:15:37.727+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:15:37.727+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:15:37.727+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:15:37.740+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:15:37.740+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:15:37.740+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:15:37.741+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=HttpConnectionPool-000002] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:15:42.816+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:15:42.818+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:15:42.818+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:15:42.818+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:15:42.818+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:15:42.818+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:15:42.819+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:15:42.819+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:15:42.830+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:15:42.830+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:15:42.830+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:15:42.830+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:15:42.866+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:15:42.866+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:15:42.866+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:15:42.866+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=HttpConnectionPool-000003] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:15:47.458+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:15:47.458+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:15:47.458+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:15:47.458+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:15:47.459+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:15:47.459+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:15:47.459+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:15:47.459+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:15:47.469+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:15:47.469+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:15:47.469+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:15:47.470+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:15:47.483+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:15:47.483+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:15:47.483+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:15:47.483+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=HttpConnectionPool-000004] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:15:50.577+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:15:50.579+08:00 verbose -[7FF733CBD7C0] [Originator@6876 sub=Default] Backtrace: 
+--> 
+--> [backtrace begin] product: VMware Workstation, version: e.x.p, build: build-2459827, tag: -
+--> backtrace[00] libvmacore.so[0x003D9C74]: Vmacore::System::Stacktrace::CaptureWork(unsigned int)
+--> backtrace[01] libvmacore.so[0x001DBF37]: Vmacore::System::SystemFactoryImpl::CreateQuickBacktrace(Vmacore::Ref<Vmacore::System::Backtrace>&)
+--> backtrace[02] libvmacore.so[0x0018481D]: Vmacore::Throwable::Throwable(std::string const&)
+--> backtrace[03] ovftool.bin[0x0020E7CC]
+--> backtrace[04] ovftool.bin[0x001F7638]
+--> backtrace[05] ovftool.bin[0x001EE979]
+--> backtrace[06] ovftool.bin[0x001EEB04]
+--> backtrace[07] libc.so.6[0x00021EC5]
+--> backtrace[08] ovftool.bin[0x001626B9]
+--> [backtrace end]
+--> 
+2016-03-03T15:17:21.338+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] [SSL_DB] Using /root/.ovftool.ssldb as SSL DB
+2016-03-03T15:17:21.339+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Subscribing to signal: 2 (SIGINT)
+2016-03-03T15:17:21.339+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Subscribing to signal: 4 (SIGILL)
+2016-03-03T15:17:21.339+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Subscribing to signal: 6 (SIGABRT)
+2016-03-03T15:17:21.339+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Subscribing to signal: 8 (SIGFPE)
+2016-03-03T15:17:21.339+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Subscribing to signal: 15 (SIGTERM)
+2016-03-03T15:17:21.339+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Subscribing to signal: 1 (SIGHUP)
+2016-03-03T15:17:21.339+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Subscribing to signal: 3 (SIGQUIT)
+2016-03-03T15:17:21.339+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Subscribing to signal: 5 (SIGTRAP)
+2016-03-03T15:17:21.339+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Subscribing to signal: 9 (SIGKILL)
+2016-03-03T15:17:21.339+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Subscribing to signal: 13 (SIGPIPE)
+2016-03-03T15:17:21.339+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Initializing progress
+2016-03-03T15:17:21.339+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] OvfTool Version: VMware ovftool 4.1.0 (build-2459827)
+2016-03-03T15:17:21.339+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Using home directory: ./.ovftool
+2016-03-03T15:17:21.345+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Curl Version: 7.30.0
+2016-03-03T15:17:21.345+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Done initializing libs
+2016-03-03T15:17:21.345+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Determining source
+2016-03-03T15:17:21.345+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Determining target
+2016-03-03T15:17:21.345+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting source
+2016-03-03T15:17:21.345+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:17:21.346+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:17:21.346+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Opening source
+2016-03-03T15:17:21.346+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] OvfPackageSourceBase::Open
+2016-03-03T15:17:21.347+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Manifest file present. Parsing file.
+2016-03-03T15:17:21.347+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Manifest file entry: SHA1(nsx-controller.vmdk) = 8767b265c670b9a4fa2edc524ce28c3466137718
+2016-03-03T15:17:21.347+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Certificate file present. Validating content.
+2016-03-03T15:17:21.347+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Certificate found: -----BEGIN CERTIFICATE-----
+--> MIIDyzCCArOgAwIBAgIJAKH7xLtwMqSZMA0GCSqGSIb3DQEBBQUAME0xCzAJBgNV
+--> BAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYDVQQHEwlQYWxvIEFsdG8x
+--> FTATBgNVBAoTDFZNd2FyZSwgSW5jLjAeFw0xMDAyMjYyMjE3NDFaFw0yNjAxMDMy
+--> MjE3NDFaME0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYD
+--> VQQHEwlQYWxvIEFsdG8xFTATBgNVBAoTDFZNd2FyZSwgSW5jLjCCASAwDQYJKoZI
+--> hvcNAQEBBQADggENADCCAQgCggEBALU9NUtC39fqG7yo2XAswUmtli9uA+31uAMw
+--> 9FFHAEv/it8pzBQZ/4r+2bN+GnXOWhuDd1K4ApKMRvoO4LwQfZxrkx4pXrsu0gdb
+--> 4OunHw0D8MrdzSoob8Js/uq+IJ+8Bhsc6b7RzTUt9HeDWzHasAJVgMsjehGt23ay
+--> 9FKOT6dVD6D/Xi3qJnB/4t/XNS6L63dC3ea4guzKDyLaXIP5bf/m56jvVImFjhhT
+--> W2ASbnEUlZIVrEuyVcdG7e3FvZufE553JmHL0YG/0m5bIHXKRzBRx0D3HHOAzOKw
+--> kkOnxJHSTN4Hz8hSYCWvzUAjSYL3Q8qiTd7GHJ2ynsRnu3KlzKUCAQOjga8wgaww
+--> HQYDVR0OBBYEFHg8KQJdm8NPQDmYP41uEgKG+VNwMH0GA1UdIwR2MHSAFHg8KQJd
+--> m8NPQDmYP41uEgKG+VNwoVGkTzBNMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2Fs
+--> aWZvcm5pYTESMBAGA1UEBxMJUGFsbyBBbHRvMRUwEwYDVQQKEwxWTXdhcmUsIElu
+--> Yy6CCQCh+8S7cDKkmTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQCP
+--> nVEBVF2jYEsgaTJ1v17HNTVTD5pBPfbQk/2vYVZEWL20PtJuLeSWwoo5+TnCSp69
+--> i9n1Hpm9JWHjyb1Lba8Xx7VC4FferIyxt0ivRm9l9ouo/pQAR8xyqjTg1qfr5V8S
+--> fZElKbjpzSMPrxLwF77h+YB+YjqWAJpVV+fAkAvK7K9vMiFgW60teZBxVW/XlmG0
+--> IJaSUWSI3/A+bA6fuIy8PMmpQMtm0droHrCnViAVRhMMgEC/doMH1GqUSmoiyQ1G
+--> PifLAp5wV5/HV+S9AGrb8HGdWIvW+kBgmCl0wSf2JFYm1bpq30CVE4EC0MAY1mJG
+--> vSqQGIbCybw5KTCXRQ8d
+--> -----END CERTIFICATE-----
+--> 
+2016-03-03T15:17:21.347+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Using Linux certificate repository: /etc/ssl/certs/ca-certificates.crt
+2016-03-03T15:17:21.347+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Using certificate repository at /usr/lib/vmware-ovftool/certs
+2016-03-03T15:17:21.348+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Referenced file in OVF descriptor does not appear in the manifest file. This is allowed by OVF spec.
+2016-03-03T15:17:21.349+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Verifying that the files references in manifest are valid
+2016-03-03T15:17:21.349+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] OvfPackageSourceBase parsing message bundle
+2016-03-03T15:17:21.350+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Validating files
+2016-03-03T15:17:21.350+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:17:21.350+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:17:21.350+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:17:21.351+08:00 verbose -[7F97424247C0] [Originator@6876 sub=HttpConnectionPool-000000] HttpConnectionPoolImpl created. maxPoolConnections = 20; idleTimeout = 900000000; maxOpenConnections = 20; maxConnectionAge = 0
+2016-03-03T15:17:21.351+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:17:21.351+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:17:21.351+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:17:21.351+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:17:21.362+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:17:21.362+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:17:21.362+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:17:21.362+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:17:21.375+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:17:21.375+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:17:21.375+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:17:21.375+08:00 verbose -[7F97424247C0] [Originator@6876 sub=HttpConnectionPool-000001] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:17:26.444+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:17:29.996+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:17:29.996+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:17:29.996+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:17:29.996+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:17:29.996+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:17:29.997+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:17:29.997+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:17:30.007+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:17:30.007+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:17:30.007+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:17:30.007+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:17:30.019+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:17:30.019+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:17:30.019+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:17:30.019+08:00 verbose -[7F97424247C0] [Originator@6876 sub=HttpConnectionPool-000002] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:17:34.094+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:17:34.095+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:17:34.095+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:17:34.095+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:17:34.095+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:17:34.095+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:17:34.096+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:17:34.096+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:17:34.106+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:17:34.106+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:17:34.106+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:17:34.106+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:17:34.117+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:17:34.117+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:17:34.118+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:17:34.118+08:00 verbose -[7F97424247C0] [Originator@6876 sub=HttpConnectionPool-000003] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:17:39.192+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:17:39.194+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:17:39.194+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:17:39.194+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:17:39.194+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:17:39.195+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:17:39.195+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:17:39.195+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:17:39.205+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:17:39.205+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:17:39.206+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:17:39.206+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:17:39.217+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:17:39.217+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:17:39.217+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:17:39.217+08:00 verbose -[7F97424247C0] [Originator@6876 sub=HttpConnectionPool-000004] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:17:42.310+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:17:42.311+08:00 verbose -[7F97424247C0] [Originator@6876 sub=Default] Backtrace: 
+--> 
+--> [backtrace begin] product: VMware Workstation, version: e.x.p, build: build-2459827, tag: -
+--> backtrace[00] libvmacore.so[0x003D9C74]: Vmacore::System::Stacktrace::CaptureWork(unsigned int)
+--> backtrace[01] libvmacore.so[0x001DBF37]: Vmacore::System::SystemFactoryImpl::CreateQuickBacktrace(Vmacore::Ref<Vmacore::System::Backtrace>&)
+--> backtrace[02] libvmacore.so[0x0018481D]: Vmacore::Throwable::Throwable(std::string const&)
+--> backtrace[03] ovftool.bin[0x0020E7CC]
+--> backtrace[04] ovftool.bin[0x001F7638]
+--> backtrace[05] ovftool.bin[0x001EE979]
+--> backtrace[06] ovftool.bin[0x001EEB04]
+--> backtrace[07] libc.so.6[0x00021EC5]
+--> backtrace[08] ovftool.bin[0x001626B9]
+--> [backtrace end]
+--> 
+2016-03-03T15:18:00.327+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] [SSL_DB] Using /root/.ovftool.ssldb as SSL DB
+2016-03-03T15:18:00.328+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Subscribing to signal: 2 (SIGINT)
+2016-03-03T15:18:00.328+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Subscribing to signal: 4 (SIGILL)
+2016-03-03T15:18:00.328+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Subscribing to signal: 6 (SIGABRT)
+2016-03-03T15:18:00.328+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Subscribing to signal: 8 (SIGFPE)
+2016-03-03T15:18:00.328+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Subscribing to signal: 15 (SIGTERM)
+2016-03-03T15:18:00.328+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Subscribing to signal: 1 (SIGHUP)
+2016-03-03T15:18:00.328+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Subscribing to signal: 3 (SIGQUIT)
+2016-03-03T15:18:00.328+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Subscribing to signal: 5 (SIGTRAP)
+2016-03-03T15:18:00.328+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Subscribing to signal: 9 (SIGKILL)
+2016-03-03T15:18:00.328+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Subscribing to signal: 13 (SIGPIPE)
+2016-03-03T15:18:00.328+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Initializing progress
+2016-03-03T15:18:00.328+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] OvfTool Version: VMware ovftool 4.1.0 (build-2459827)
+2016-03-03T15:18:00.328+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Using home directory: ./.ovftool
+2016-03-03T15:18:00.334+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Curl Version: 7.30.0
+2016-03-03T15:18:00.334+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Done initializing libs
+2016-03-03T15:18:00.334+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Determining source
+2016-03-03T15:18:00.334+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Determining target
+2016-03-03T15:18:00.334+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting source
+2016-03-03T15:18:00.334+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:18:00.334+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:18:00.335+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Opening source
+2016-03-03T15:18:00.335+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] OvfPackageSourceBase::Open
+2016-03-03T15:18:00.335+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Manifest file present. Parsing file.
+2016-03-03T15:18:00.335+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Manifest file entry: SHA1(nsx-controller.vmdk) = 8767b265c670b9a4fa2edc524ce28c3466137718
+2016-03-03T15:18:00.336+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Certificate file present. Validating content.
+2016-03-03T15:18:00.336+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Certificate found: -----BEGIN CERTIFICATE-----
+--> MIIDyzCCArOgAwIBAgIJAKH7xLtwMqSZMA0GCSqGSIb3DQEBBQUAME0xCzAJBgNV
+--> BAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYDVQQHEwlQYWxvIEFsdG8x
+--> FTATBgNVBAoTDFZNd2FyZSwgSW5jLjAeFw0xMDAyMjYyMjE3NDFaFw0yNjAxMDMy
+--> MjE3NDFaME0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYD
+--> VQQHEwlQYWxvIEFsdG8xFTATBgNVBAoTDFZNd2FyZSwgSW5jLjCCASAwDQYJKoZI
+--> hvcNAQEBBQADggENADCCAQgCggEBALU9NUtC39fqG7yo2XAswUmtli9uA+31uAMw
+--> 9FFHAEv/it8pzBQZ/4r+2bN+GnXOWhuDd1K4ApKMRvoO4LwQfZxrkx4pXrsu0gdb
+--> 4OunHw0D8MrdzSoob8Js/uq+IJ+8Bhsc6b7RzTUt9HeDWzHasAJVgMsjehGt23ay
+--> 9FKOT6dVD6D/Xi3qJnB/4t/XNS6L63dC3ea4guzKDyLaXIP5bf/m56jvVImFjhhT
+--> W2ASbnEUlZIVrEuyVcdG7e3FvZufE553JmHL0YG/0m5bIHXKRzBRx0D3HHOAzOKw
+--> kkOnxJHSTN4Hz8hSYCWvzUAjSYL3Q8qiTd7GHJ2ynsRnu3KlzKUCAQOjga8wgaww
+--> HQYDVR0OBBYEFHg8KQJdm8NPQDmYP41uEgKG+VNwMH0GA1UdIwR2MHSAFHg8KQJd
+--> m8NPQDmYP41uEgKG+VNwoVGkTzBNMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2Fs
+--> aWZvcm5pYTESMBAGA1UEBxMJUGFsbyBBbHRvMRUwEwYDVQQKEwxWTXdhcmUsIElu
+--> Yy6CCQCh+8S7cDKkmTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQCP
+--> nVEBVF2jYEsgaTJ1v17HNTVTD5pBPfbQk/2vYVZEWL20PtJuLeSWwoo5+TnCSp69
+--> i9n1Hpm9JWHjyb1Lba8Xx7VC4FferIyxt0ivRm9l9ouo/pQAR8xyqjTg1qfr5V8S
+--> fZElKbjpzSMPrxLwF77h+YB+YjqWAJpVV+fAkAvK7K9vMiFgW60teZBxVW/XlmG0
+--> IJaSUWSI3/A+bA6fuIy8PMmpQMtm0droHrCnViAVRhMMgEC/doMH1GqUSmoiyQ1G
+--> PifLAp5wV5/HV+S9AGrb8HGdWIvW+kBgmCl0wSf2JFYm1bpq30CVE4EC0MAY1mJG
+--> vSqQGIbCybw5KTCXRQ8d
+--> -----END CERTIFICATE-----
+--> 
+2016-03-03T15:18:00.336+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Using Linux certificate repository: /etc/ssl/certs/ca-certificates.crt
+2016-03-03T15:18:00.336+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Using certificate repository at /usr/lib/vmware-ovftool/certs
+2016-03-03T15:18:00.337+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Referenced file in OVF descriptor does not appear in the manifest file. This is allowed by OVF spec.
+2016-03-03T15:18:00.338+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Verifying that the files references in manifest are valid
+2016-03-03T15:18:00.338+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] OvfPackageSourceBase parsing message bundle
+2016-03-03T15:18:00.339+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Validating files
+2016-03-03T15:18:00.339+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:18:00.339+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:18:00.339+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:18:00.339+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=HttpConnectionPool-000000] HttpConnectionPoolImpl created. maxPoolConnections = 20; idleTimeout = 900000000; maxOpenConnections = 20; maxConnectionAge = 0
+2016-03-03T15:18:00.340+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:18:00.340+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:18:00.340+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:18:00.340+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:18:00.357+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:18:00.358+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:18:00.358+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:18:00.358+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:18:00.392+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:18:00.392+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:18:00.392+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:18:00.392+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=HttpConnectionPool-000001] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:18:04.765+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:18:44.809+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:18:44.809+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:18:44.809+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:18:44.809+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:18:44.809+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:18:44.810+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:18:44.810+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:18:44.822+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:18:44.822+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:18:44.822+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:18:44.823+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:18:44.834+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:18:44.834+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:18:44.834+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:18:44.835+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=HttpConnectionPool-000002] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:18:47.911+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:18:47.911+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:18:47.911+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:18:47.911+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:18:47.912+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:18:47.912+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:18:47.912+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:18:47.912+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:18:47.922+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:18:47.922+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:18:47.922+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:18:47.923+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:18:47.935+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:18:47.935+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:18:47.935+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:18:47.935+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=HttpConnectionPool-000003] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:18:49.155+08:00 verbose -[7F98DB6C4700] [Originator@6876 sub=HttpConnectionPool-000001] [RemoveConnection] Connection removed; cnx: <SSL(<io_obj p:0x00007f98b803de70, h:-1, <TCP '0.0.0.0:0'>, <TCP '192.168.0.85:443'>>)>; pooled: 0
+2016-03-03T15:18:51.012+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:18:51.013+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:18:51.013+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:18:51.013+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:18:51.013+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:18:51.013+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:18:51.014+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:18:51.014+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:18:51.024+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:18:51.024+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:18:51.024+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:18:51.024+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:18:51.035+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:18:51.035+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:18:51.035+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:18:51.036+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=HttpConnectionPool-000004] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:18:55.117+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:18:55.118+08:00 verbose -[7F98DB6C67C0] [Originator@6876 sub=Default] Backtrace: 
+--> 
+--> [backtrace begin] product: VMware Workstation, version: e.x.p, build: build-2459827, tag: -
+--> backtrace[00] libvmacore.so[0x003D9C74]: Vmacore::System::Stacktrace::CaptureWork(unsigned int)
+--> backtrace[01] libvmacore.so[0x001DBF37]: Vmacore::System::SystemFactoryImpl::CreateQuickBacktrace(Vmacore::Ref<Vmacore::System::Backtrace>&)
+--> backtrace[02] libvmacore.so[0x0018481D]: Vmacore::Throwable::Throwable(std::string const&)
+--> backtrace[03] ovftool.bin[0x0020E7CC]
+--> backtrace[04] ovftool.bin[0x001F7638]
+--> backtrace[05] ovftool.bin[0x001EE979]
+--> backtrace[06] ovftool.bin[0x001EEB04]
+--> backtrace[07] libc.so.6[0x00021EC5]
+--> backtrace[08] ovftool.bin[0x001626B9]
+--> [backtrace end]
+--> 
+2016-03-03T15:21:58.538+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] [SSL_DB] Using /root/.ovftool.ssldb as SSL DB
+2016-03-03T15:21:58.539+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Subscribing to signal: 2 (SIGINT)
+2016-03-03T15:21:58.539+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Subscribing to signal: 4 (SIGILL)
+2016-03-03T15:21:58.539+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Subscribing to signal: 6 (SIGABRT)
+2016-03-03T15:21:58.539+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Subscribing to signal: 8 (SIGFPE)
+2016-03-03T15:21:58.539+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Subscribing to signal: 15 (SIGTERM)
+2016-03-03T15:21:58.539+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Subscribing to signal: 1 (SIGHUP)
+2016-03-03T15:21:58.539+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Subscribing to signal: 3 (SIGQUIT)
+2016-03-03T15:21:58.539+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Subscribing to signal: 5 (SIGTRAP)
+2016-03-03T15:21:58.539+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Subscribing to signal: 9 (SIGKILL)
+2016-03-03T15:21:58.539+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Subscribing to signal: 13 (SIGPIPE)
+2016-03-03T15:21:58.539+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Initializing progress
+2016-03-03T15:21:58.539+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] OvfTool Version: VMware ovftool 4.1.0 (build-2459827)
+2016-03-03T15:21:58.539+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Using home directory: ./.ovftool
+2016-03-03T15:21:58.545+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Curl Version: 7.30.0
+2016-03-03T15:21:58.545+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Done initializing libs
+2016-03-03T15:21:58.545+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Determining source
+2016-03-03T15:21:58.545+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Determining target
+2016-03-03T15:21:58.545+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Getting source
+2016-03-03T15:21:58.546+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:21:58.546+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:21:58.546+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Opening source
+2016-03-03T15:21:58.546+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] OvfPackageSourceBase::Open
+2016-03-03T15:21:58.547+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Manifest file present. Parsing file.
+2016-03-03T15:21:58.547+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Manifest file entry: SHA1(nsx-controller.vmdk) = 8767b265c670b9a4fa2edc524ce28c3466137718
+2016-03-03T15:21:58.547+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Certificate file present. Validating content.
+2016-03-03T15:21:58.547+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Certificate found: -----BEGIN CERTIFICATE-----
+--> MIIDyzCCArOgAwIBAgIJAKH7xLtwMqSZMA0GCSqGSIb3DQEBBQUAME0xCzAJBgNV
+--> BAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYDVQQHEwlQYWxvIEFsdG8x
+--> FTATBgNVBAoTDFZNd2FyZSwgSW5jLjAeFw0xMDAyMjYyMjE3NDFaFw0yNjAxMDMy
+--> MjE3NDFaME0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYD
+--> VQQHEwlQYWxvIEFsdG8xFTATBgNVBAoTDFZNd2FyZSwgSW5jLjCCASAwDQYJKoZI
+--> hvcNAQEBBQADggENADCCAQgCggEBALU9NUtC39fqG7yo2XAswUmtli9uA+31uAMw
+--> 9FFHAEv/it8pzBQZ/4r+2bN+GnXOWhuDd1K4ApKMRvoO4LwQfZxrkx4pXrsu0gdb
+--> 4OunHw0D8MrdzSoob8Js/uq+IJ+8Bhsc6b7RzTUt9HeDWzHasAJVgMsjehGt23ay
+--> 9FKOT6dVD6D/Xi3qJnB/4t/XNS6L63dC3ea4guzKDyLaXIP5bf/m56jvVImFjhhT
+--> W2ASbnEUlZIVrEuyVcdG7e3FvZufE553JmHL0YG/0m5bIHXKRzBRx0D3HHOAzOKw
+--> kkOnxJHSTN4Hz8hSYCWvzUAjSYL3Q8qiTd7GHJ2ynsRnu3KlzKUCAQOjga8wgaww
+--> HQYDVR0OBBYEFHg8KQJdm8NPQDmYP41uEgKG+VNwMH0GA1UdIwR2MHSAFHg8KQJd
+--> m8NPQDmYP41uEgKG+VNwoVGkTzBNMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2Fs
+--> aWZvcm5pYTESMBAGA1UEBxMJUGFsbyBBbHRvMRUwEwYDVQQKEwxWTXdhcmUsIElu
+--> Yy6CCQCh+8S7cDKkmTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQCP
+--> nVEBVF2jYEsgaTJ1v17HNTVTD5pBPfbQk/2vYVZEWL20PtJuLeSWwoo5+TnCSp69
+--> i9n1Hpm9JWHjyb1Lba8Xx7VC4FferIyxt0ivRm9l9ouo/pQAR8xyqjTg1qfr5V8S
+--> fZElKbjpzSMPrxLwF77h+YB+YjqWAJpVV+fAkAvK7K9vMiFgW60teZBxVW/XlmG0
+--> IJaSUWSI3/A+bA6fuIy8PMmpQMtm0droHrCnViAVRhMMgEC/doMH1GqUSmoiyQ1G
+--> PifLAp5wV5/HV+S9AGrb8HGdWIvW+kBgmCl0wSf2JFYm1bpq30CVE4EC0MAY1mJG
+--> vSqQGIbCybw5KTCXRQ8d
+--> -----END CERTIFICATE-----
+--> 
+2016-03-03T15:21:58.548+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Using Linux certificate repository: /etc/ssl/certs/ca-certificates.crt
+2016-03-03T15:21:58.548+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Using certificate repository at /usr/lib/vmware-ovftool/certs
+2016-03-03T15:21:58.548+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Referenced file in OVF descriptor does not appear in the manifest file. This is allowed by OVF spec.
+2016-03-03T15:21:58.550+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Verifying that the files references in manifest are valid
+2016-03-03T15:21:58.550+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] OvfPackageSourceBase parsing message bundle
+2016-03-03T15:21:58.551+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Validating files
+2016-03-03T15:21:58.551+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:21:58.551+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:21:58.551+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:21:58.551+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=HttpConnectionPool-000000] HttpConnectionPoolImpl created. maxPoolConnections = 20; idleTimeout = 900000000; maxOpenConnections = 20; maxConnectionAge = 0
+2016-03-03T15:21:58.551+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:21:58.551+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:21:58.552+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:21:58.552+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:21:58.563+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:21:58.563+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:21:58.563+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:21:58.563+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:21:58.574+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:21:58.575+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:21:58.575+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:21:58.575+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=HttpConnectionPool-000001] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:22:02.694+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Getting username and password
+2016-03-03T15:22:10.663+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:22:10.663+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:22:10.663+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:22:10.664+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:22:10.664+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:22:10.664+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:22:10.664+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:22:10.674+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:22:10.674+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:22:10.675+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:22:10.675+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:22:10.687+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:22:10.687+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:22:10.687+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:22:10.688+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=HttpConnectionPool-000002] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:22:11.041+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Setup nfcService, used to get a ticket for uploading/downloading a disk.
+2016-03-03T15:22:11.521+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Get host or vc sslthumpprint.
+2016-03-03T15:22:11.521+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Keeping VI session alive
+2016-03-03T15:22:11.768+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Ovf converter is executing
+2016-03-03T15:22:11.769+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Starting Ovf convertion, OVF source Descriptor: <?xml version="1.0" encoding="UTF-8"?>
+--> <ovf:Envelope xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns="http://schemas.dmtf.org/ovf/envelope/1" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vmw="http://www.vmware.com/schema/ovf">
+-->   <References>
+-->     <File ovf:href="nsx-controller.vmdk" ovf:size="720806912" ovf:id="nsx-controller.vmdk_id"/>
+-->   </References>
+-->   <NetworkSection>
+-->     <Info>List of logical networks used in the package</Info>
+-->     <Network ovf:name="Network 1">
+-->       <Description>Network 1</Description>
+-->     </Network>
+-->   </NetworkSection>
+-->   <vmw:IpAssignmentSection ovf:required="false" vmw:protocols="IPv4,IPv6" vmw:schemes="">
+-->     <Info>Supported IP assignment schemes</Info>
+-->   </vmw:IpAssignmentSection>
+-->   <DiskSection>
+-->     <Info>List of the virtual disks and partitions needed</Info>
+-->     <Disk ovf:diskId="system" ovf:capacity="122880" ovf:capacityAllocationUnits="byte * 2^20" ovf:format="http://www.vmware.com/interfaces/specifications/vmdk.html#streamOptimized" ovf:fileRef="nsx-controller.vmdk_id" ovf:populatedSize="1911619584"/>
+-->   </DiskSection>
+-->   <VirtualSystem ovf:id="nsx-controller">
+-->     <Info>A virtual machine</Info>
+-->     <ProductSection ovf:required="false">
+-->       <Info>VM ISV branding information</Info>
+-->       <Product>nsx-controller</Product>
+-->       <Vendor>VMware, Inc</Vendor>
+-->       <!--
+-->             Version is the actual product version in the
+-->             form X.X.X.X where X is an unsigned 16-bit integer.
+--> 
+-->             FullVersion is a descriptive version string
+-->             including, for example, alpha or beta designations
+-->             and other release criteria.
+-->         -->
+-->       <Version>1.0.0.0</Version>
+-->       <FullVersion>1.0.0.0.0.3612232</FullVersion>
+-->       <ProductUrl/>
+-->       <VendorUrl/>
+-->       <AppUrl>http://${vami.ip0.nsx-controller}/</AppUrl>
+-->       <Category>Application</Category>
+-->       <Property ovf:key="nsx_passwd_0" ovf:type="string" ovf:userConfigurable="true" ovf:qualifiers="MinLen(1)" ovf:password="true">
+-->         <Label ovf:msgid="root.user.password.label">System Root User Password</Label>
+-->         <Description ovf:msgid="root.user.password.desc">The password for root user for this VM.
+-->                                                        Please follow the password complexity rule as below:
+-->                                                        - Min of 8 characters
+-->                                                        - &gt;=1 lower case letter
+-->                                                        - &gt;=1 upper case letter
+-->                                                        - &gt;=1 number digit
+-->                                                        - &gt;=1 special char
+-->                                                        NOTE: Password strength validation will occur during VM boot. If the password
+-->                                                        does not meet the above criteria then login as root user for the change password
+-->                                                        prompt to appear.
+-->       </Description>
+-->       </Property>
+-->       <Property ovf:key="nsx_cli_passwd_0" ovf:type="string" ovf:userConfigurable="true" ovf:qualifiers="MinLen(1)" ovf:password="true">
+-->         <Label ovf:msgid="cli.user.password.label">CLI "admin" User Password</Label>
+-->         <Description ovf:msgid="cli.user.password.desc">The password for default CLI user for this VM.
+-->                                                       Please follow the password complexity rule as below:
+-->                                                       - Min of 8 characters
+-->                                                       - &gt;=1 lower case letter
+-->                                                       - &gt;=1 upper case letter
+-->                                                       - &gt;=1 number digit
+-->                                                       - &gt;=1 special char
+-->                                                       NOTE: Password strength validation will occur during VM boot. If the password
+-->                                                       does not meet the above criteria then login as admin user for the change password
+-->                                                       prompt to appear.
+-->       </Description>
+-->       </Property>
+-->       <Category ovf:msgid="network.ipv4.category">Network properties</Category>
+-->       <Property ovf:key="nsx_hostname" ovf:type="string" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="hostname.label">Hostname</Label>
+-->         <Description ovf:msgid="hostname.desc">The hostname for this VM.</Description>
+-->       </Property>
+-->       <Property ovf:key="nsx_gateway_0" ovf:type="string" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="network.ipv4.gateway.label">Default IPv4 Gateway</Label>
+-->         <Description ovf:msgid="network.ipv4.gateway.desc">The default gateway for this VM.</Description>
+-->       </Property>
+-->       <Property ovf:key="nsx_ip_0" ovf:type="string" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="network.ipv4.address.label">Management Network IPv4 Address</Label>
+-->         <Description ovf:msgid="network.ipv4.address.desc">The IPv4 Address for the first interface.</Description>
+-->       </Property>
+-->       <Property ovf:key="nsx_netmask_0" ovf:type="string" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="network.ipv4.netmask.label">Management Network Netmask</Label>
+-->         <Description ovf:msgid="network.ipv4.netmask.desc">The netmask for the first interface.</Description>
+-->       </Property>
+-->       <Category ovf:msgid="dns.category">DNS</Category>
+-->       <Property ovf:key="nsx_dns1_0" ovf:type="string" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="dns.primary.label">DNS Server list</Label>
+-->         <Description ovf:msgid="dns.primary.desc">The DNS server list(space separated) for this VM.</Description>
+-->       </Property>
+-->       <Property ovf:key="nsx_domain_0" ovf:type="string" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="dns.domain.label">Domain Search List</Label>
+-->         <Description ovf:msgid="dns.domain.desc">The domain Search list(space separated) for this VM.</Description>
+-->       </Property>
+-->       <Category ovf:msgid="services.configuration.category">Services Configuration</Category>
+-->       <Property ovf:key="nsx_ntp_0" ovf:type="string" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="ntp.label">NTP Server List</Label>
+-->         <Description ovf:msgid="ntp.desc">The NTP server list(space separated) for this VM.</Description>
+-->       </Property>
+-->       <Property ovf:key="nsx_isSSHEnabled" ovf:value="false" ovf:type="boolean" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="ssh.label">Enable SSH</Label>
+-->         <Description ovf:msgid="ssh.desc">Enabling SSH service is not recommended for security reasons.</Description>
+-->       </Property>
+-->       <Property ovf:key="nsx_allowSSHRootLogin" ovf:value="false" ovf:type="boolean" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="ssh.label">Allow root SSH logins</Label>
+-->         <Description ovf:msgid="ssh.desc">Allowing root SSH logins is not recommended for security reasons.</Description>
+-->       </Property>
+-->     </ProductSection>
+-->     <ProductSection ovf:class="vami" ovf:instance="nsx-controller" ovf:required="false">
+-->       <Info>VAMI Properties</Info>
+-->     </ProductSection>
+-->     <ProductSection ovf:class="vm" ovf:required="false">
+-->       <Info>VM specific properties</Info>
+-->     </ProductSection>
+-->     <AnnotationSection>
+-->       <Info/>
+-->       <Annotation/>
+-->     </AnnotationSection>
+-->     <OperatingSystemSection ovf:id="94" ovf:version="" vmw:osType="ubuntu64Guest">
+-->       <Info>Guest Operating System</Info>
+-->       <Description>Ubuntu 12.04 64bit</Description>
+-->     </OperatingSystemSection>
+-->     <VirtualHardwareSection ovf:transport="com.vmware.guestInfo" ovf:required="false">
+-->       <Info>Virtual Hardware Requirements</Info>
+-->       <System>
+-->         <vssd:ElementName>Virtual Hardware Family</vssd:ElementName>
+-->         <vssd:InstanceID>0</vssd:InstanceID>
+-->         <vssd:VirtualSystemType>vmx-11 vmx-10</vssd:VirtualSystemType>
+-->       </System>
+-->       <Item>
+-->         <rasd:AllocationUnits>hertz * 10^6</rasd:AllocationUnits>
+-->         <rasd:Description>Number of virtual CPUs</rasd:Description>
+-->         <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">2 virtual CPU</rasd:ElementName>
+-->         <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">1</rasd:InstanceID>
+-->         <rasd:ResourceType>3</rasd:ResourceType>
+-->         <rasd:VirtualQuantity>2</rasd:VirtualQuantity>
+-->       </Item>
+-->       <Item>
+-->         <rasd:AllocationUnits>byte * 2^20</rasd:AllocationUnits>
+-->         <rasd:Description>Memory Size</rasd:Description>
+-->         <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">16384 MB of memory</rasd:ElementName>
+-->         <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">2</rasd:InstanceID>
+-->         <rasd:ResourceType>4</rasd:ResourceType>
+-->         <rasd:VirtualQuantity>16384</rasd:VirtualQuantity>
+-->       </Item>
+-->       <Item>
+-->         <rasd:AutomaticAllocation>true</rasd:AutomaticAllocation>
+-->         <rasd:Connection>Network 1</rasd:Connection>
+-->         <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">Ethernet adapter on vmnet</rasd:ElementName>
+-->         <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">3</rasd:InstanceID>
+-->         <rasd:ResourceSubType>VmxNet3</rasd:ResourceSubType>
+-->         <rasd:ResourceType>10</rasd:ResourceType>
+-->       </Item>
+-->       <Item>
+-->         <rasd:Address xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">0</rasd:Address>
+-->         <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">SCSI Controller 0  - lsilogic</rasd:ElementName>
+-->         <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">4</rasd:InstanceID>
+-->         <rasd:ResourceSubType>lsilogic</rasd:ResourceSubType>
+-->         <rasd:ResourceType>6</rasd:ResourceType>
+-->       </Item>
+-->       <Item>
+-->         <rasd:AddressOnParent>0</rasd:AddressOnParent>
+-->         <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">Harddisk 1</rasd:ElementName>
+-->         <rasd:HostResource>ovf:/disk/system</rasd:HostResource>
+-->         <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">5</rasd:InstanceID>
+-->         <rasd:Parent>4</rasd:Parent>
+-->         <rasd:ResourceType>17</rasd:ResourceType>
+-->       </Item>
+-->       <vmw:Config ovf:required="false" vmw:key="tools.syncTimeWithHost" vmw:value="false"/>
+-->       <vmw:ExtraConfig vmw:key="time.synchronize.continue" vmw:value="false"/>
+-->       <vmw:ExtraConfig vmw:key="time.synchronize.restore" vmw:value="false"/>
+-->       <vmw:ExtraConfig vmw:key="time.synchronize.resume.disk" vmw:value="false"/>
+-->       <vmw:ExtraConfig vmw:key="time.synchronize.shrink" vmw:value="false"/>
+-->       <vmw:ExtraConfig vmw:key="time.synchronize.tools.startup" vmw:value="false"/>
+--> 	<vmw:ExtraConfig vmw:key="RemoteDisplay.maxConnections" vmw:value="1"/>
+-->     </VirtualHardwareSection>
+-->   </VirtualSystem>
+--> </ovf:Envelope>
+--> 
+2016-03-03T15:22:12.099+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Hostsystem used as deploy target: vim.HostSystem:host-51
+2016-03-03T15:22:13.086+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:22:13.089+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Using file size as progress measure
+2016-03-03T15:22:13.090+08:00 verbose -[7FA8C1A7C700] [Originator@6876 sub=Default] OvfPackageSourceBase getting file source
+2016-03-03T15:22:13.090+08:00 verbose -[7FA8C1A7C700] [Originator@6876 sub=Default] HttpWriterFactory web request : https://192.168.0.57/nfc/52116d17-99db-b62e-bf78-a4dce1cdc053/disk-0.vmdk
+2016-03-03T15:22:13.090+08:00 verbose -[7FA8C1A7C700] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:22:39.392+08:00 verbose -[7FA8C1A7C700] [Originator@6876 sub=Default] Closing writer. Locator: https://192.168.0.57/nfc/52116d17-99db-b62e-bf78-a4dce1cdc053/disk-0.vmdk (Written bytes: 720806912)
+2016-03-03T15:22:39.405+08:00 verbose -[7FA8C1A7C700] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:22:39.433+08:00 verbose -[7FA8C1AC67C0] [Originator@6876 sub=Default] Backtrace: 
+--> 
+--> [backtrace begin] product: VMware Workstation, version: e.x.p, build: build-2459827, tag: -
+--> backtrace[00] libvmacore.so[0x003D9C74]: Vmacore::System::Stacktrace::CaptureWork(unsigned int)
+--> backtrace[01] libvmacore.so[0x001DBF37]: Vmacore::System::SystemFactoryImpl::CreateQuickBacktrace(Vmacore::Ref<Vmacore::System::Backtrace>&)
+--> backtrace[02] libvmacore.so[0x0018481D]: Vmacore::Throwable::Throwable(std::string const&)
+--> backtrace[03] ovftool.bin[0x0020DFB3]
+--> backtrace[04] ovftool.bin[0x0024F7F3]
+--> backtrace[05] ovftool.bin[0x001A5694]: UploadWorker::DoWork()
+--> backtrace[06] ovftool.bin[0x001A9B0B]: WorkHelper(Vmacore::Functor<void, Vmacore::Nil, Vmacore::Nil, Vmacore::Nil, Vmacore::Nil, Vmacore::Nil, Vmacore::Nil, Vmacore::Nil> const*, Vmacore::System::Mutex*, Vmacore::System::Condition*, Vmacore::Atomic<int>*, boost::exception_ptr&)
+--> backtrace[07] libvmacore.so[0x002FA7A0]
+--> backtrace[08] libvmacore.so[0x002FAF84]
+--> backtrace[09] libvmacore.so[0x002FB131]
+--> backtrace[10] libvmacore.so[0x00303B63]
+--> backtrace[11] libvmacore.so[0x00306CA4]
+--> backtrace[12] libvmacore.so[0x002FC642]
+--> backtrace[13] libvmacore.so[0x003E5792]
+--> backtrace[14] libpthread.so.0[0x00008182]
+--> backtrace[15] libc.so.6[0x000FB30D]
+--> [backtrace end]
+--> 
+2016-03-03T15:27:13.355+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] [SSL_DB] Using /root/.ovftool.ssldb as SSL DB
+2016-03-03T15:27:13.356+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Subscribing to signal: 2 (SIGINT)
+2016-03-03T15:27:13.356+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Subscribing to signal: 4 (SIGILL)
+2016-03-03T15:27:13.356+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Subscribing to signal: 6 (SIGABRT)
+2016-03-03T15:27:13.356+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Subscribing to signal: 8 (SIGFPE)
+2016-03-03T15:27:13.356+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Subscribing to signal: 15 (SIGTERM)
+2016-03-03T15:27:13.356+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Subscribing to signal: 1 (SIGHUP)
+2016-03-03T15:27:13.356+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Subscribing to signal: 3 (SIGQUIT)
+2016-03-03T15:27:13.356+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Subscribing to signal: 5 (SIGTRAP)
+2016-03-03T15:27:13.356+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Subscribing to signal: 9 (SIGKILL)
+2016-03-03T15:27:13.356+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Subscribing to signal: 13 (SIGPIPE)
+2016-03-03T15:27:13.356+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Initializing progress
+2016-03-03T15:27:13.356+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] OvfTool Version: VMware ovftool 4.1.0 (build-2459827)
+2016-03-03T15:27:13.356+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Using home directory: ./.ovftool
+2016-03-03T15:27:13.361+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Curl Version: 7.30.0
+2016-03-03T15:27:13.361+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Done initializing libs
+2016-03-03T15:27:13.361+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Determining source
+2016-03-03T15:27:13.362+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Determining target
+2016-03-03T15:27:13.362+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Getting source
+2016-03-03T15:27:13.362+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:27:13.362+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:27:13.367+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Opening source
+2016-03-03T15:27:13.367+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] OvfPackageSourceBase::Open
+2016-03-03T15:27:13.367+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Manifest file present. Parsing file.
+2016-03-03T15:27:13.367+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Manifest file entry: SHA1(nsx-controller.vmdk) = 76364af72e3460ab2e40c2fc2e9a1b59f4bb264c
+2016-03-03T15:27:13.368+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Certificate file present. Validating content.
+2016-03-03T15:27:13.368+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Certificate found: -----BEGIN CERTIFICATE-----
+--> MIIDyzCCArOgAwIBAgIJAKH7xLtwMqSZMA0GCSqGSIb3DQEBBQUAME0xCzAJBgNV
+--> BAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYDVQQHEwlQYWxvIEFsdG8x
+--> FTATBgNVBAoTDFZNd2FyZSwgSW5jLjAeFw0xMDAyMjYyMjE3NDFaFw0yNjAxMDMy
+--> MjE3NDFaME0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYD
+--> VQQHEwlQYWxvIEFsdG8xFTATBgNVBAoTDFZNd2FyZSwgSW5jLjCCASAwDQYJKoZI
+--> hvcNAQEBBQADggENADCCAQgCggEBALU9NUtC39fqG7yo2XAswUmtli9uA+31uAMw
+--> 9FFHAEv/it8pzBQZ/4r+2bN+GnXOWhuDd1K4ApKMRvoO4LwQfZxrkx4pXrsu0gdb
+--> 4OunHw0D8MrdzSoob8Js/uq+IJ+8Bhsc6b7RzTUt9HeDWzHasAJVgMsjehGt23ay
+--> 9FKOT6dVD6D/Xi3qJnB/4t/XNS6L63dC3ea4guzKDyLaXIP5bf/m56jvVImFjhhT
+--> W2ASbnEUlZIVrEuyVcdG7e3FvZufE553JmHL0YG/0m5bIHXKRzBRx0D3HHOAzOKw
+--> kkOnxJHSTN4Hz8hSYCWvzUAjSYL3Q8qiTd7GHJ2ynsRnu3KlzKUCAQOjga8wgaww
+--> HQYDVR0OBBYEFHg8KQJdm8NPQDmYP41uEgKG+VNwMH0GA1UdIwR2MHSAFHg8KQJd
+--> m8NPQDmYP41uEgKG+VNwoVGkTzBNMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2Fs
+--> aWZvcm5pYTESMBAGA1UEBxMJUGFsbyBBbHRvMRUwEwYDVQQKEwxWTXdhcmUsIElu
+--> Yy6CCQCh+8S7cDKkmTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQCP
+--> nVEBVF2jYEsgaTJ1v17HNTVTD5pBPfbQk/2vYVZEWL20PtJuLeSWwoo5+TnCSp69
+--> i9n1Hpm9JWHjyb1Lba8Xx7VC4FferIyxt0ivRm9l9ouo/pQAR8xyqjTg1qfr5V8S
+--> fZElKbjpzSMPrxLwF77h+YB+YjqWAJpVV+fAkAvK7K9vMiFgW60teZBxVW/XlmG0
+--> IJaSUWSI3/A+bA6fuIy8PMmpQMtm0droHrCnViAVRhMMgEC/doMH1GqUSmoiyQ1G
+--> PifLAp5wV5/HV+S9AGrb8HGdWIvW+kBgmCl0wSf2JFYm1bpq30CVE4EC0MAY1mJG
+--> vSqQGIbCybw5KTCXRQ8d
+--> -----END CERTIFICATE-----
+--> 
+2016-03-03T15:27:13.368+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Using Linux certificate repository: /etc/ssl/certs/ca-certificates.crt
+2016-03-03T15:27:13.368+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Using certificate repository at /usr/lib/vmware-ovftool/certs
+2016-03-03T15:27:13.369+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Referenced file in OVF descriptor does not appear in the manifest file. This is allowed by OVF spec.
+2016-03-03T15:27:13.370+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Verifying that the files references in manifest are valid
+2016-03-03T15:27:13.370+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] OvfPackageSourceBase parsing message bundle
+2016-03-03T15:27:13.371+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Validating files
+2016-03-03T15:27:13.371+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:27:13.374+08:00 verbose -[7F9B86C367C0] [Originator@6876 sub=Default] Backtrace: 
+--> 
+--> [backtrace begin] product: VMware Workstation, version: e.x.p, build: build-2459827, tag: -
+--> backtrace[00] libvmacore.so[0x003D9C74]: Vmacore::System::Stacktrace::CaptureWork(unsigned int)
+--> backtrace[01] libvmacore.so[0x001DBF37]: Vmacore::System::SystemFactoryImpl::CreateQuickBacktrace(Vmacore::Ref<Vmacore::System::Backtrace>&)
+--> backtrace[02] libvmacore.so[0x0018481D]: Vmacore::Throwable::Throwable(std::string const&)
+--> backtrace[03] ovftool.bin[0x0020DFB3]
+--> backtrace[04] ovftool.bin[0x0028DA00]
+--> backtrace[05] ovftool.bin[0x00298589]
+--> backtrace[06] ovftool.bin[0x001EC853]
+--> backtrace[07] ovftool.bin[0x001EEB04]
+--> backtrace[08] libc.so.6[0x00021EC5]
+--> backtrace[09] ovftool.bin[0x001626B9]
+--> [backtrace end]
+--> 
+2016-03-03T15:28:14.579+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] [SSL_DB] Using /root/.ovftool.ssldb as SSL DB
+2016-03-03T15:28:14.580+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Subscribing to signal: 2 (SIGINT)
+2016-03-03T15:28:14.580+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Subscribing to signal: 4 (SIGILL)
+2016-03-03T15:28:14.580+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Subscribing to signal: 6 (SIGABRT)
+2016-03-03T15:28:14.580+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Subscribing to signal: 8 (SIGFPE)
+2016-03-03T15:28:14.580+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Subscribing to signal: 15 (SIGTERM)
+2016-03-03T15:28:14.580+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Subscribing to signal: 1 (SIGHUP)
+2016-03-03T15:28:14.580+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Subscribing to signal: 3 (SIGQUIT)
+2016-03-03T15:28:14.580+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Subscribing to signal: 5 (SIGTRAP)
+2016-03-03T15:28:14.580+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Subscribing to signal: 9 (SIGKILL)
+2016-03-03T15:28:14.580+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Subscribing to signal: 13 (SIGPIPE)
+2016-03-03T15:28:14.580+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Initializing progress
+2016-03-03T15:28:14.580+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] OvfTool Version: VMware ovftool 4.1.0 (build-2459827)
+2016-03-03T15:28:14.580+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Using home directory: ./.ovftool
+2016-03-03T15:28:14.585+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Curl Version: 7.30.0
+2016-03-03T15:28:14.585+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Done initializing libs
+2016-03-03T15:28:14.585+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Determining source
+2016-03-03T15:28:14.585+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Determining target
+2016-03-03T15:28:14.585+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Getting source
+2016-03-03T15:28:14.585+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:28:14.586+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:28:14.586+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Opening source
+2016-03-03T15:28:14.586+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] OvfPackageSourceBase::Open
+2016-03-03T15:28:14.587+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Manifest file present. Parsing file.
+2016-03-03T15:28:14.587+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Manifest file entry: SHA1(nsx-controller.vmdk) = 76364af72e3460ab2e40c2fc2e9a1b59f4bb264c
+2016-03-03T15:28:14.587+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Certificate file present. Validating content.
+2016-03-03T15:28:14.587+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Certificate found: -----BEGIN CERTIFICATE-----
+--> MIIDyzCCArOgAwIBAgIJAKH7xLtwMqSZMA0GCSqGSIb3DQEBBQUAME0xCzAJBgNV
+--> BAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYDVQQHEwlQYWxvIEFsdG8x
+--> FTATBgNVBAoTDFZNd2FyZSwgSW5jLjAeFw0xMDAyMjYyMjE3NDFaFw0yNjAxMDMy
+--> MjE3NDFaME0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYD
+--> VQQHEwlQYWxvIEFsdG8xFTATBgNVBAoTDFZNd2FyZSwgSW5jLjCCASAwDQYJKoZI
+--> hvcNAQEBBQADggENADCCAQgCggEBALU9NUtC39fqG7yo2XAswUmtli9uA+31uAMw
+--> 9FFHAEv/it8pzBQZ/4r+2bN+GnXOWhuDd1K4ApKMRvoO4LwQfZxrkx4pXrsu0gdb
+--> 4OunHw0D8MrdzSoob8Js/uq+IJ+8Bhsc6b7RzTUt9HeDWzHasAJVgMsjehGt23ay
+--> 9FKOT6dVD6D/Xi3qJnB/4t/XNS6L63dC3ea4guzKDyLaXIP5bf/m56jvVImFjhhT
+--> W2ASbnEUlZIVrEuyVcdG7e3FvZufE553JmHL0YG/0m5bIHXKRzBRx0D3HHOAzOKw
+--> kkOnxJHSTN4Hz8hSYCWvzUAjSYL3Q8qiTd7GHJ2ynsRnu3KlzKUCAQOjga8wgaww
+--> HQYDVR0OBBYEFHg8KQJdm8NPQDmYP41uEgKG+VNwMH0GA1UdIwR2MHSAFHg8KQJd
+--> m8NPQDmYP41uEgKG+VNwoVGkTzBNMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2Fs
+--> aWZvcm5pYTESMBAGA1UEBxMJUGFsbyBBbHRvMRUwEwYDVQQKEwxWTXdhcmUsIElu
+--> Yy6CCQCh+8S7cDKkmTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQCP
+--> nVEBVF2jYEsgaTJ1v17HNTVTD5pBPfbQk/2vYVZEWL20PtJuLeSWwoo5+TnCSp69
+--> i9n1Hpm9JWHjyb1Lba8Xx7VC4FferIyxt0ivRm9l9ouo/pQAR8xyqjTg1qfr5V8S
+--> fZElKbjpzSMPrxLwF77h+YB+YjqWAJpVV+fAkAvK7K9vMiFgW60teZBxVW/XlmG0
+--> IJaSUWSI3/A+bA6fuIy8PMmpQMtm0droHrCnViAVRhMMgEC/doMH1GqUSmoiyQ1G
+--> PifLAp5wV5/HV+S9AGrb8HGdWIvW+kBgmCl0wSf2JFYm1bpq30CVE4EC0MAY1mJG
+--> vSqQGIbCybw5KTCXRQ8d
+--> -----END CERTIFICATE-----
+--> 
+2016-03-03T15:28:14.588+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Using Linux certificate repository: /etc/ssl/certs/ca-certificates.crt
+2016-03-03T15:28:14.588+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Using certificate repository at /usr/lib/vmware-ovftool/certs
+2016-03-03T15:28:14.588+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Referenced file in OVF descriptor does not appear in the manifest file. This is allowed by OVF spec.
+2016-03-03T15:28:14.589+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Verifying that the files references in manifest are valid
+2016-03-03T15:28:14.590+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] OvfPackageSourceBase parsing message bundle
+2016-03-03T15:28:14.590+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Validating files
+2016-03-03T15:28:14.591+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:28:14.592+08:00 verbose -[7F682C8C77C0] [Originator@6876 sub=Default] Backtrace: 
+--> 
+--> [backtrace begin] product: VMware Workstation, version: e.x.p, build: build-2459827, tag: -
+--> backtrace[00] libvmacore.so[0x003D9C74]: Vmacore::System::Stacktrace::CaptureWork(unsigned int)
+--> backtrace[01] libvmacore.so[0x001DBF37]: Vmacore::System::SystemFactoryImpl::CreateQuickBacktrace(Vmacore::Ref<Vmacore::System::Backtrace>&)
+--> backtrace[02] libvmacore.so[0x0018481D]: Vmacore::Throwable::Throwable(std::string const&)
+--> backtrace[03] ovftool.bin[0x0020DFB3]
+--> backtrace[04] ovftool.bin[0x0028DA00]
+--> backtrace[05] ovftool.bin[0x00298589]
+--> backtrace[06] ovftool.bin[0x001EC853]
+--> backtrace[07] ovftool.bin[0x001EEB04]
+--> backtrace[08] libc.so.6[0x00021EC5]
+--> backtrace[09] ovftool.bin[0x001626B9]
+--> [backtrace end]
+--> 
+2016-03-03T15:28:53.352+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] [SSL_DB] Using /root/.ovftool.ssldb as SSL DB
+2016-03-03T15:28:53.353+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Subscribing to signal: 2 (SIGINT)
+2016-03-03T15:28:53.353+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Subscribing to signal: 4 (SIGILL)
+2016-03-03T15:28:53.353+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Subscribing to signal: 6 (SIGABRT)
+2016-03-03T15:28:53.353+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Subscribing to signal: 8 (SIGFPE)
+2016-03-03T15:28:53.353+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Subscribing to signal: 15 (SIGTERM)
+2016-03-03T15:28:53.353+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Subscribing to signal: 1 (SIGHUP)
+2016-03-03T15:28:53.353+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Subscribing to signal: 3 (SIGQUIT)
+2016-03-03T15:28:53.353+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Subscribing to signal: 5 (SIGTRAP)
+2016-03-03T15:28:53.353+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Subscribing to signal: 9 (SIGKILL)
+2016-03-03T15:28:53.353+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Subscribing to signal: 13 (SIGPIPE)
+2016-03-03T15:28:53.353+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Initializing progress
+2016-03-03T15:28:53.353+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] OvfTool Version: VMware ovftool 4.1.0 (build-2459827)
+2016-03-03T15:28:53.353+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Using home directory: ./.ovftool
+2016-03-03T15:28:53.358+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Curl Version: 7.30.0
+2016-03-03T15:28:53.359+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Done initializing libs
+2016-03-03T15:28:53.359+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Determining source
+2016-03-03T15:28:53.359+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Determining target
+2016-03-03T15:28:53.359+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Getting source
+2016-03-03T15:28:53.359+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:28:53.359+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:28:53.359+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Opening source
+2016-03-03T15:28:53.359+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] OvfPackageSourceBase::Open
+2016-03-03T15:28:53.360+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Manifest file present. Parsing file.
+2016-03-03T15:28:53.360+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Manifest file entry: SHA1(nsx-controller.vmdk) = 76364af72e3460ab2e40c2fc2e9a1b59f4bb264c
+2016-03-03T15:28:53.360+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Certificate file present. Validating content.
+2016-03-03T15:28:53.360+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Certificate found: -----BEGIN CERTIFICATE-----
+--> MIIDyzCCArOgAwIBAgIJAKH7xLtwMqSZMA0GCSqGSIb3DQEBBQUAME0xCzAJBgNV
+--> BAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYDVQQHEwlQYWxvIEFsdG8x
+--> FTATBgNVBAoTDFZNd2FyZSwgSW5jLjAeFw0xMDAyMjYyMjE3NDFaFw0yNjAxMDMy
+--> MjE3NDFaME0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYD
+--> VQQHEwlQYWxvIEFsdG8xFTATBgNVBAoTDFZNd2FyZSwgSW5jLjCCASAwDQYJKoZI
+--> hvcNAQEBBQADggENADCCAQgCggEBALU9NUtC39fqG7yo2XAswUmtli9uA+31uAMw
+--> 9FFHAEv/it8pzBQZ/4r+2bN+GnXOWhuDd1K4ApKMRvoO4LwQfZxrkx4pXrsu0gdb
+--> 4OunHw0D8MrdzSoob8Js/uq+IJ+8Bhsc6b7RzTUt9HeDWzHasAJVgMsjehGt23ay
+--> 9FKOT6dVD6D/Xi3qJnB/4t/XNS6L63dC3ea4guzKDyLaXIP5bf/m56jvVImFjhhT
+--> W2ASbnEUlZIVrEuyVcdG7e3FvZufE553JmHL0YG/0m5bIHXKRzBRx0D3HHOAzOKw
+--> kkOnxJHSTN4Hz8hSYCWvzUAjSYL3Q8qiTd7GHJ2ynsRnu3KlzKUCAQOjga8wgaww
+--> HQYDVR0OBBYEFHg8KQJdm8NPQDmYP41uEgKG+VNwMH0GA1UdIwR2MHSAFHg8KQJd
+--> m8NPQDmYP41uEgKG+VNwoVGkTzBNMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2Fs
+--> aWZvcm5pYTESMBAGA1UEBxMJUGFsbyBBbHRvMRUwEwYDVQQKEwxWTXdhcmUsIElu
+--> Yy6CCQCh+8S7cDKkmTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQCP
+--> nVEBVF2jYEsgaTJ1v17HNTVTD5pBPfbQk/2vYVZEWL20PtJuLeSWwoo5+TnCSp69
+--> i9n1Hpm9JWHjyb1Lba8Xx7VC4FferIyxt0ivRm9l9ouo/pQAR8xyqjTg1qfr5V8S
+--> fZElKbjpzSMPrxLwF77h+YB+YjqWAJpVV+fAkAvK7K9vMiFgW60teZBxVW/XlmG0
+--> IJaSUWSI3/A+bA6fuIy8PMmpQMtm0droHrCnViAVRhMMgEC/doMH1GqUSmoiyQ1G
+--> PifLAp5wV5/HV+S9AGrb8HGdWIvW+kBgmCl0wSf2JFYm1bpq30CVE4EC0MAY1mJG
+--> vSqQGIbCybw5KTCXRQ8d
+--> -----END CERTIFICATE-----
+--> 
+2016-03-03T15:28:53.361+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Using Linux certificate repository: /etc/ssl/certs/ca-certificates.crt
+2016-03-03T15:28:53.361+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Using certificate repository at /usr/lib/vmware-ovftool/certs
+2016-03-03T15:28:53.361+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Referenced file in OVF descriptor does not appear in the manifest file. This is allowed by OVF spec.
+2016-03-03T15:28:53.362+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Verifying that the files references in manifest are valid
+2016-03-03T15:28:53.362+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] OvfPackageSourceBase parsing message bundle
+2016-03-03T15:28:53.363+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Validating files
+2016-03-03T15:28:53.363+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Getting target
+2016-03-03T15:28:53.364+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Connecting to vi host
+2016-03-03T15:28:53.364+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Skip SSL verification
+2016-03-03T15:28:53.364+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=HttpConnectionPool-000000] HttpConnectionPoolImpl created. maxPoolConnections = 20; idleTimeout = 900000000; maxOpenConnections = 20; maxConnectionAge = 0
+2016-03-03T15:28:53.364+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Getting version of the VI host : 192.168.0.85
+2016-03-03T15:28:53.364+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:28:53.365+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] WebRequest set basic http authorization, username : administrator%40vsphere.local
+2016-03-03T15:28:53.365+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Getting http page: https://192.168.0.85/sdk/vimServiceVersions.xml
+2016-03-03T15:28:53.376+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Http response code: 200
+2016-03-03T15:28:53.376+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Http response body:
+--> <?xml version="1.0" encoding="UTF-8" ?><namespaces version="1.0"><namespace><name>urn:vim25</name><version>6.0</version><priorVersions><version>5.5</version><version>5.1</version><version>5.0</version><version>4.1</version><version>4.0</version><version>2.5u2server</version><version>2.5u2</version><version>2.5</version></priorVersions></namespace><namespace><name>urn:vim2</name><version>2.0</version></namespace></namespaces>
+--> 
+2016-03-03T15:28:53.376+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:28:53.376+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] [ViConnection] Using vim API version: 6.0
+2016-03-03T15:28:53.389+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Determine if server is a standalone host or vpxd
+2016-03-03T15:28:53.389+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Login to server based on username and password
+2016-03-03T15:28:53.389+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Setting VI connection message locale (via login) to: 
+2016-03-03T15:28:53.401+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=HttpConnectionPool-000001] HttpConnectionPoolImpl created. maxPoolConnections = 1; idleTimeout = 900000000; maxOpenConnections = 1; maxConnectionAge = 0
+2016-03-03T15:28:53.599+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Setup nfcService, used to get a ticket for uploading/downloading a disk.
+2016-03-03T15:28:53.608+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Get host or vc sslthumpprint.
+2016-03-03T15:28:53.608+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Keeping VI session alive
+2016-03-03T15:28:53.634+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Ovf converter is executing
+2016-03-03T15:28:53.635+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Starting Ovf convertion, OVF source Descriptor: <?xml version="1.0" encoding="UTF-8"?>
+--> <ovf:Envelope xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns="http://schemas.dmtf.org/ovf/envelope/1" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vmw="http://www.vmware.com/schema/ovf">
+-->   <References>
+-->     <File ovf:href="nsx-controller.vmdk" ovf:size="719875584" ovf:id="nsx-controller.vmdk_id"/>
+-->   </References>
+-->   <NetworkSection>
+-->     <Info>List of logical networks used in the package</Info>
+-->     <Network ovf:name="Network 1">
+-->       <Description>Network 1</Description>
+-->     </Network>
+-->   </NetworkSection>
+-->   <vmw:IpAssignmentSection ovf:required="false" vmw:protocols="IPv4,IPv6" vmw:schemes="">
+-->     <Info>Supported IP assignment schemes</Info>
+-->   </vmw:IpAssignmentSection>
+-->   <DiskSection>
+-->     <Info>List of the virtual disks and partitions needed</Info>
+-->     <Disk ovf:diskId="system" ovf:capacity="122880" ovf:capacityAllocationUnits="byte * 2^20" ovf:format="http://www.vmware.com/interfaces/specifications/vmdk.html#streamOptimized" ovf:fileRef="nsx-controller.vmdk_id" ovf:populatedSize="1879244800"/>
+-->   </DiskSection>
+-->   <VirtualSystem ovf:id="nsx-controller">
+-->     <Info>A virtual machine</Info>
+-->     <ProductSection ovf:required="false">
+-->       <Info>VM ISV branding information</Info>
+-->       <Product>nsx-controller</Product>
+-->       <Vendor>VMware, Inc</Vendor>
+-->       <!--
+-->             Version is the actual product version in the
+-->             form X.X.X.X where X is an unsigned 16-bit integer.
+--> 
+-->             FullVersion is a descriptive version string
+-->             including, for example, alpha or beta designations
+-->             and other release criteria.
+-->         -->
+-->       <Version>1.0.0.0</Version>
+-->       <FullVersion>1.0.0.0.0.3540153</FullVersion>
+-->       <ProductUrl/>
+-->       <VendorUrl/>
+-->       <AppUrl>http://${vami.ip0.nsx-controller}/</AppUrl>
+-->       <Category>Application</Category>
+-->       <Property ovf:key="nsx_passwd_0" ovf:type="string" ovf:userConfigurable="true" ovf:qualifiers="MinLen(1)" ovf:password="true">
+-->         <Label ovf:msgid="root.user.password.label">System Root User Password</Label>
+-->         <Description ovf:msgid="root.user.password.desc">The password for root user for this VM.
+-->                                                        Please follow the password complexity rule as below:
+-->                                                        - Min of 8 characters
+-->                                                        - &gt;=1 lower case letter
+-->                                                        - &gt;=1 upper case letter
+-->                                                        - &gt;=1 number digit
+-->                                                        - &gt;=1 special char
+-->                                                        NOTE: Password strength validation will occur during VM boot. If the password
+-->                                                        does not meet the above criteria then login as root user for the change password
+-->                                                        prompt to appear.
+-->       </Description>
+-->       </Property>
+-->       <Property ovf:key="nsx_cli_passwd_0" ovf:type="string" ovf:userConfigurable="true" ovf:qualifiers="MinLen(1)" ovf:password="true">
+-->         <Label ovf:msgid="cli.user.password.label">CLI "admin" User Password</Label>
+-->         <Description ovf:msgid="cli.user.password.desc">The password for default CLI user for this VM.
+-->                                                       Please follow the password complexity rule as below:
+-->                                                       - Min of 8 characters
+-->                                                       - &gt;=1 lower case letter
+-->                                                       - &gt;=1 upper case letter
+-->                                                       - &gt;=1 number digit
+-->                                                       - &gt;=1 special char
+-->                                                       NOTE: Password strength validation will occur during VM boot. If the password
+-->                                                       does not meet the above criteria then login as admin user for the change password
+-->                                                       prompt to appear.
+-->       </Description>
+-->       </Property>
+-->       <Category ovf:msgid="network.ipv4.category">Network properties</Category>
+-->       <Property ovf:key="nsx_hostname" ovf:type="string" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="hostname.label">Hostname</Label>
+-->         <Description ovf:msgid="hostname.desc">The hostname for this VM.</Description>
+-->       </Property>
+-->       <Property ovf:key="nsx_gateway_0" ovf:type="string" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="network.ipv4.gateway.label">Default IPv4 Gateway</Label>
+-->         <Description ovf:msgid="network.ipv4.gateway.desc">The default gateway for this VM.</Description>
+-->       </Property>
+-->       <Property ovf:key="nsx_ip_0" ovf:type="string" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="network.ipv4.address.label">Management Network IPv4 Address</Label>
+-->         <Description ovf:msgid="network.ipv4.address.desc">The IPv4 Address for the first interface.</Description>
+-->       </Property>
+-->       <Property ovf:key="nsx_netmask_0" ovf:type="string" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="network.ipv4.netmask.label">Management Network Netmask</Label>
+-->         <Description ovf:msgid="network.ipv4.netmask.desc">The netmask for the first interface.</Description>
+-->       </Property>
+-->       <Category ovf:msgid="dns.category">DNS</Category>
+-->       <Property ovf:key="nsx_dns1_0" ovf:type="string" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="dns.primary.label">DNS Server list</Label>
+-->         <Description ovf:msgid="dns.primary.desc">The DNS server list(space separated) for this VM.</Description>
+-->       </Property>
+-->       <Property ovf:key="nsx_domain_0" ovf:type="string" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="dns.domain.label">Domain Search List</Label>
+-->         <Description ovf:msgid="dns.domain.desc">The domain Search list(space separated) for this VM.</Description>
+-->       </Property>
+-->       <Category ovf:msgid="services.configuration.category">Services Configuration</Category>
+-->       <Property ovf:key="nsx_ntp_0" ovf:type="string" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="ntp.label">NTP Server List</Label>
+-->         <Description ovf:msgid="ntp.desc">The NTP server list(space separated) for this VM.</Description>
+-->       </Property>
+-->       <Property ovf:key="nsx_isSSHEnabled" ovf:value="false" ovf:type="boolean" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="ssh.label">Enable SSH</Label>
+-->         <Description ovf:msgid="ssh.desc">Enabling SSH service is not recommended for security reasons.</Description>
+-->       </Property>
+-->       <Property ovf:key="nsx_allowSSHRootLogin" ovf:value="false" ovf:type="boolean" ovf:userConfigurable="true">
+-->         <Label ovf:msgid="ssh.label">Allow root SSH logins</Label>
+-->         <Description ovf:msgid="ssh.desc">Allowing root SSH logins is not recommended for security reasons.</Description>
+-->       </Property>
+-->     </ProductSection>
+-->     <ProductSection ovf:class="vami" ovf:instance="nsx-controller" ovf:required="false">
+-->       <Info>VAMI Properties</Info>
+-->     </ProductSection>
+-->     <ProductSection ovf:class="vm" ovf:required="false">
+-->       <Info>VM specific properties</Info>
+-->     </ProductSection>
+-->     <AnnotationSection>
+-->       <Info/>
+-->       <Annotation/>
+-->     </AnnotationSection>
+-->     <OperatingSystemSection ovf:id="94" ovf:version="" vmw:osType="ubuntu64Guest">
+-->       <Info>Guest Operating System</Info>
+-->       <Description>Ubuntu 12.04 64bit</Description>
+-->     </OperatingSystemSection>
+-->     <VirtualHardwareSection ovf:transport="com.vmware.guestInfo" ovf:required="false">
+-->       <Info>Virtual Hardware Requirements</Info>
+-->       <System>
+-->         <vssd:ElementName>Virtual Hardware Family</vssd:ElementName>
+-->         <vssd:InstanceID>0</vssd:InstanceID>
+-->         <vssd:VirtualSystemType>vmx-11 vmx-10</vssd:VirtualSystemType>
+-->       </System>
+-->       <Item>
+-->         <rasd:AllocationUnits>hertz * 10^6</rasd:AllocationUnits>
+-->         <rasd:Description>Number of virtual CPUs</rasd:Description>
+-->         <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">2 virtual CPU</rasd:ElementName>
+-->         <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">1</rasd:InstanceID>
+-->         <rasd:ResourceType>3</rasd:ResourceType>
+-->         <rasd:VirtualQuantity>2</rasd:VirtualQuantity>
+-->       </Item>
+-->       <Item>
+-->         <rasd:AllocationUnits>byte * 2^20</rasd:AllocationUnits>
+-->         <rasd:Description>Memory Size</rasd:Description>
+-->         <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">16384 MB of memory</rasd:ElementName>
+-->         <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">2</rasd:InstanceID>
+-->         <rasd:ResourceType>4</rasd:ResourceType>
+-->         <rasd:VirtualQuantity>16384</rasd:VirtualQuantity>
+-->       </Item>
+-->       <Item>
+-->         <rasd:AutomaticAllocation>true</rasd:AutomaticAllocation>
+-->         <rasd:Connection>Network 1</rasd:Connection>
+-->         <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">Ethernet adapter on vmnet</rasd:ElementName>
+-->         <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">3</rasd:InstanceID>
+-->         <rasd:ResourceSubType>VmxNet3</rasd:ResourceSubType>
+-->         <rasd:ResourceType>10</rasd:ResourceType>
+-->       </Item>
+-->       <Item>
+-->         <rasd:Address xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">0</rasd:Address>
+-->         <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">SCSI Controller 0  - lsilogic</rasd:ElementName>
+-->         <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">4</rasd:InstanceID>
+-->         <rasd:ResourceSubType>lsilogic</rasd:ResourceSubType>
+-->         <rasd:ResourceType>6</rasd:ResourceType>
+-->       </Item>
+-->       <Item>
+-->         <rasd:AddressOnParent>0</rasd:AddressOnParent>
+-->         <rasd:ElementName xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">Harddisk 1</rasd:ElementName>
+-->         <rasd:HostResource>ovf:/disk/system</rasd:HostResource>
+-->         <rasd:InstanceID xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData">5</rasd:InstanceID>
+-->         <rasd:Parent>4</rasd:Parent>
+-->         <rasd:ResourceType>17</rasd:ResourceType>
+-->       </Item>
+-->       <vmw:Config ovf:required="false" vmw:key="tools.syncTimeWithHost" vmw:value="false"/>
+-->       <vmw:ExtraConfig vmw:key="time.synchronize.continue" vmw:value="false"/>
+-->       <vmw:ExtraConfig vmw:key="time.synchronize.restore" vmw:value="false"/>
+-->       <vmw:ExtraConfig vmw:key="time.synchronize.resume.disk" vmw:value="false"/>
+-->       <vmw:ExtraConfig vmw:key="time.synchronize.shrink" vmw:value="false"/>
+-->       <vmw:ExtraConfig vmw:key="time.synchronize.tools.startup" vmw:value="false"/>
+--> 	<vmw:ExtraConfig vmw:key="RemoteDisplay.maxConnections" vmw:value="1"/>
+-->     </VirtualHardwareSection>
+-->   </VirtualSystem>
+--> </ovf:Envelope>
+--> 
+2016-03-03T15:28:53.764+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Hostsystem used as deploy target: vim.HostSystem:host-16
+2016-03-03T15:28:54.693+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Parsing URL
+2016-03-03T15:28:54.711+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Using file size as progress measure
+2016-03-03T15:28:54.711+08:00 verbose -[7FB5D0BA2700] [Originator@6876 sub=Default] OvfPackageSourceBase getting file source
+2016-03-03T15:28:54.712+08:00 verbose -[7FB5D0BA2700] [Originator@6876 sub=Default] HttpWriterFactory web request : https://192.168.0.55/nfc/5252590d-0343-b522-aaac-66bf47127d50/disk-0.vmdk
+2016-03-03T15:28:54.712+08:00 verbose -[7FB5D0BA2700] [Originator@6876 sub=Default] Initializing new curl session
+2016-03-03T15:29:28.153+08:00 verbose -[7FB5D0BA2700] [Originator@6876 sub=Default] Closing writer. Locator: https://192.168.0.55/nfc/5252590d-0343-b522-aaac-66bf47127d50/disk-0.vmdk (Written bytes: 719875584)
+2016-03-03T15:29:28.167+08:00 verbose -[7FB5D0BA2700] [Originator@6876 sub=Default] Curl session torn down
+2016-03-03T15:29:28.168+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] Ovf convertion finished
+2016-03-03T15:29:30.298+08:00 verbose -[7FB5D977A7C0] [Originator@6876 sub=Default] OutputFilePath : 

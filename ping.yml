@@ -1,0 +1,9 @@
+--- 
+
+- hosts: nsxmgrs
+  vars_files: 
+   - /root/ansible/var.yml
+
+  tasks: 
+   - name: ping 
+     ping:

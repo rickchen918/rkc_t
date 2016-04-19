@@ -1,0 +1,25 @@
+--- 
+
+- name: remove the manager-1 hostkey                    
+  command: ssh-keygen -f "/root/.ssh/known_hosts" -R {{mgr1_ip}}
+
+- name: remove the manager-2 hostkey
+  command: ssh-keygen -f "/root/.ssh/known_hosts" -R {{mgr2_ip}}
+
+- name: remove the manager-3 hostkey
+  command: ssh-keygen -f "/root/.ssh/known_hosts" -R {{mgr3_ip}}
+
+- name: remove the controller-1 hostkey
+  command: ssh-keygen -f "/root/.ssh/known_hosts" -R {{ctr1_ip}}
+
+- name: remove the controller-2 hostkey
+  command: ssh-keygen -f "/root/.ssh/known_hosts" -R {{ctr2_ip}}
+
+- name: remove the controller-3 hostkey
+  command: ssh-keygen -f "/root/.ssh/known_hosts" -R {{ctr3_ip}}
+
+- name: remove the edge-1 hostkey
+  command: ssh-keygen -f "/root/.ssh/known_hosts" -R {{edge1_ip}}
+
+- name: remove the edge-2 hostkey
+  command: ssh-keygen -f "/root/.ssh/known_hosts" -R {{edge2_ip}}

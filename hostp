@@ -1,0 +1,11 @@
+---
+- hosts: transport
+  vars_files: 
+   - /root/ansible/var.yml
+  tasks:
+   - name: remove hostkey 
+     file: path=~/.ssh/known_hosts state=absent
+
+  roles:
+     - { role: HostDeployment }   
+     - { role: HostConfigure }	

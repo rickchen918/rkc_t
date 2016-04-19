@@ -1,0 +1,20 @@
+---
+- name: get thumbprint for nsx manager2
+  command: /bin/nsxcli -c get certificate api thumbprint
+  register: key2
+  delegate_to: "{{mgr2_ip}}"
+
+- name: register edge1 to management 
+  command: /bin/nsxcli -c join management-plane {{mgr2_ip}}  username admin password {{passwd}} thumbprint {{ item.thumb2 }}
+  delegate_to: "{{edge1_ip}}"
+  with_items:
+    - { thumb2: "{{key2.stdout}}" }
+
+- name: pause 2 minutes 
+  pause: minutes=2
+
+- name: register edge2 to management
+  command: /bin/nsxcli -c join management-plane {{mgr2_ip}}  username admin password {{passwd}} thumbprint {{ item.thumb2 }}
+  delegate_to: "{{edge2_ip}}"
+  with_items:
+    - { thumb2: "{{key2.stdout}}" }

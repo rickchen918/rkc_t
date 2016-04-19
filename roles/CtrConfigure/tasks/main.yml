@@ -1,0 +1,56 @@
+--- 
+
+- name: pause 1 minutes for service ready  
+  pause: minutes=1
+
+- name: master node initialization on controller 1
+  command: /bin/nsxcli -c  initialize control-cluster
+  delegate_to: "{{ctr1_ip}}"
+
+- name: get controller 2 thumbprint 
+  command: /bin/nsxcli -c get control-cluster certificate thumbprint
+  register: key2
+  delegate_to: "{{ctr2_ip}}"
+
+- name: get controller 3 thumbprint
+  command: /bin/nsxcli -c get control-cluster certificate thumbprint
+  register: key3
+  delegate_to: "{{ctr3_ip}}"
+
+- name: get controller 2 into controller cluster 
+  command: /bin/nsxcli -c join control-cluster {{ctr2_ip}} thumbprint {{item.thumb2}}
+  delegate_to: "{{ctr1_ip}}"
+  with_items: 
+    - { thumb2: "{{key2.stdout}}" }
+
+- name: get controller 3 into controller cluster
+  command: /bin/nsxcli -c join control-cluster {{ctr3_ip}} thumbprint {{item.thumb3}}
+  delegate_to: "{{ctr1_ip}}"
+  with_items:
+    - { thumb3: "{{key3.stdout}}" }
+
+- name: pause 1 minutes 
+  pause: minutes=1
+
+- name: verify controller-1 docker service before ctr2 activation 
+  service: name=docker state=running
+  register: ctr1_docker
+  delegate_to: "{{ctr1_ip}}"
+
+- name: activate controller 2 
+  command: /bin/nsxcli -c activate control-cluster 
+  delegate_to: "{{ctr2_ip}}"
+  when: ctr1_docker.state.find("started")==0
+
+- name: pause 1 minutes 
+  pause: minutes=1
+
+- name: verify controller-2 docker service before ctr3 activation
+  service: name=docker state=running
+  register: ctr2_docker
+  delegate_to: "{{ctr2_ip}}"
+
+- name: activate controller 3
+  command: /bin/nsxcli -c activate control-cluster 
+  delegate_to: "{{ctr3_ip}}"
+  when: ctr2_docker.state.find("started")==0

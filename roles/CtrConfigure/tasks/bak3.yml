@@ -1,0 +1,13 @@
+--- 
+
+- name: verify controller-1 docker service before ctr2 activation 
+  service: name=docker state=running
+  register: ctr1_docker1
+  delegate_to: "{{ctr1_ip}}"
+
+- debug: var=ctr1_docker1
+
+- name: activate controller 2 
+  command: /bin/nsxcli -c activate control-cluster 
+  delegate_to: "{{ctr2_ip}}"
+  when: ctr1_docker1.state.find("started") == 0

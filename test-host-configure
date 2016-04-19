@@ -1,0 +1,15 @@
+---
+- hosts: transport
+  vars_files: 
+   - ./var.yml
+  tasks:
+    - name: get thumbprint for nsx manager2
+      command: /bin/nsxcli -c get certificate api thumbprint
+      register: key2
+      delegate_to: "{{mgr2_ip}}"
+
+    - name: register host to management 
+      command: /bin/nsxcli -c join management-plane {{mgr2_ip}}  username admin password {{passwd}} thumbprint {{ item.thumb2 }}
+      with_items:
+        - { thumb2: "{{key2.stdout}}" }
+

@@ -1,0 +1,58 @@
+---
+- name: deploy edge 1
+  command: ovftool 
+    --name={{edge1_hostname}}
+    --X:injectOvfEnv 
+    --X:logFile=ovftool.log 
+    --allowExtraConfig
+    --datastore={{ds}}
+    --acceptAllEulas
+    --noSSLVerify
+    --diskMode=thin 
+    --powerOn 
+    --net:"Network 0"={{network}}
+    --net:"Network 1"="VM Network"
+    --net:"Network 2"="VM Network"
+    --net:"Network 3"="VM Network"
+    --prop:nsx_ip_0={{edge1_ip}} 
+    --prop:nsx_netmask_0={{edge1_netmask}}
+    --prop:nsx_gateway_0={{edge1_gw}} 
+    --prop:nsx_dns1_0={{dns}} 
+    --prop:nsx_domain_0={{domain}}
+    --prop:nsx_ntp_0={{ntp}} 
+    --prop:nsx_isSSHEnabled=True 
+    --prop:nsx_allowSSHRootLogin=True 
+    --prop:nsx_passwd_0={{passwd}}
+    --prop:nsx_cli_passwd_0={{passwd}} 
+    --prop:nsx_hostname={{edge1_vmname}}
+    {{edge_filename}}
+    vi://{{vc_cred}}@{{vc}}/{{datacenter}}/host/{{cluster}}
+
+- name: deploy edge 2
+  command: ovftool
+    --name={{edge2_hostname}}
+    --X:injectOvfEnv
+    --X:logFile=ovftool.log
+    --allowExtraConfig
+    --datastore={{ds}}
+    --acceptAllEulas
+    --noSSLVerify
+    --diskMode=thin
+    --powerOn
+    --net:"Network 0"={{network}}
+    --net:"Network 1"="VM Network"
+    --net:"Network 2"="VM Network"
+    --net:"Network 3"="VM Network"
+    --prop:nsx_ip_0={{edge2_ip}}
+    --prop:nsx_netmask_0={{edge2_netmask}}
+    --prop:nsx_gateway_0={{edge2_gw}}
+    --prop:nsx_dns1_0={{dns}}
+    --prop:nsx_domain_0={{domain}}
+    --prop:nsx_ntp_0={{ntp}}
+    --prop:nsx_isSSHEnabled=True
+    --prop:nsx_allowSSHRootLogin=True 
+    --prop:nsx_passwd_0={{passwd}}
+    --prop:nsx_cli_passwd_0={{passwd}}
+    --prop:nsx_hostname={{edge2_vmname}}
+    {{edge_filename}}
+    vi://{{vc_cred}}@{{vc}}/{{datacenter}}/host/{{cluster}}

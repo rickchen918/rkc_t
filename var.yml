@@ -1,0 +1,80 @@
+# Common inventory 
+dns: "192.168.0.96"
+ds: "nsx_lab"
+domain: "nvp.com"
+
+# vCenter
+#network: "VMNetwork"
+network: "vxw-dvs-74-virtualwire-1-sid-5000-CP-192-168-64-0"
+ntp: "192.168.0.58"
+passwd: "Nicira123$"
+cli_passwd: "Nicira123$"
+vc_cred: "administrator@vsphere.local:'Nicira123$'"
+vc: "192.168.0.85"
+datacenter: "DC"
+cluster: "lab"
+
+#software name
+ctr_filename: "/root/ansible/software/nsx-controller-1.0.0.0.0.3708070.ova"
+mgr_filename: "/root/ansible/software/nsx-manager-1.0.0.0.0.3708071.ova"
+edge_filename: "/root/ansible/software/nsx-edge-1.0.0.0.0.3708072.ova"
+
+# Manager 1
+mgr1_ip: "192.168.64.167"
+mgr1_netmask: "255.255.255.0"
+mgr1_gw: "192.168.64.1"
+mgr1_hostname: "ensxt-manager1"
+mgr1_vmname: "ensxt-manager1"
+
+# Manager 2
+mgr2_ip: "192.168.64.168"
+mgr2_netmask: "255.255.255.0"
+mgr2_gw: "192.168.64.1"
+mgr2_hostname: "ensxt-manager2"
+mgr2_vmname: "ensxt-manager2"
+
+# Manager 3
+mgr3_ip: "192.168.64.169"
+mgr3_netmask: "255.255.255.0"
+mgr3_gw: "192.168.64.1"
+mgr3_hostname: "ensxt-manager3"
+mgr3_vmname: "ensxt-manager3"
+
+
+# Common for Comtrollers 
+ctr_shared_secret: "Nicira123$"
+
+# Controller 1
+ctr1_ip: "192.168.64.164"
+ctr1_netmask: "255.255.255.0"
+ctr1_gw: "192.168.64.1"
+ctr1_hostname: "ensxt-controller1"
+ctr1_vmname: "ensxt-controller1"
+
+# Controller 2
+ctr2_ip: "192.168.64.165"
+ctr2_netmask: "255.255.255.0"
+ctr2_gw: "192.168.64.1"
+ctr2_hostname: "ensxt-controller2"
+ctr2_vmname: "ensxt-controller2"
+
+# Controller 3
+ctr3_ip: "192.168.64.166"
+ctr3_netmask: "255.255.255.0"
+ctr3_gw: "192.168.64.1"
+ctr3_hostname: "ensxt-controller3"
+ctr3_vmname: "ensxt-controller3"
+
+# Edge 1
+edge1_ip: "192.168.64.170"
+edge1_netmask: "255.255.255.0"
+edge1_gw: "192.168.64.1"
+edge1_hostname: "ensxt-edge1"
+edge1_vmname: "ensxt-edge1"
+
+# Edge 2      
+edge2_ip: "192.168.64.171"
+edge2_netmask: "255.255.255.0"
+edge2_gw: "192.168.64.1"
+edge2_hostname: "ensxt-edge2"
+edge2_vmname: "ensxt-edge2"

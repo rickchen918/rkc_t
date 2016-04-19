@@ -1,0 +1,132 @@
+---
+- name: deploy nsx manager 1
+  command: ovftool 
+   --name={{mgr1_hostname}}
+   --X:injectOvfEnv 
+   --X:logFile=ovftool.log 
+   --allowExtraConfig
+   --datastore={{ds}}
+   --network="VM Network"
+   --acceptAllEulas
+   --noSSLVerify
+   --diskMode=thin 
+   --powerOn 
+   --prop:nsx_ip_0={{mgr1_ip}} 
+   --prop:nsx_netmask_0={{mgr1_netmask}}
+   --prop:nsx_gateway_0={{mgr1_gw}} 
+   --prop:nsx_dns1_0={{dns}} 
+   --prop:nsx_domain_0={{domain}}
+   --prop:nsx_ntp_0={{ntp}} 
+   --prop:nsx_isSSHEnabled=True 
+   --prop:nsx_allowSSHRootLogin=True 
+   --prop:nsx_passwd_0={{passwd}}
+   --prop:nsx_cli_passwd_0={{passwd}} 
+   --prop:nsx_hostname={{mgr1_vmname}}
+   {{mgr_filename}}
+   vi://{{vc_cred}}@{{vc}}/{{datacenter}}/host/{{cluster}}
+
+- name: deploy nsx manager 2
+  command: ovftool
+   --name={{mgr2_hostname}}
+   --X:injectOvfEnv
+   --X:logFile=ovftool.log
+   --allowExtraConfig
+   --datastore={{ds}}
+   --network="VM Network"
+   --acceptAllEulas
+   --noSSLVerify
+   --diskMode=thin
+   --powerOn
+   --prop:nsx_ip_0={{mgr2_ip}}
+   --prop:nsx_netmask_0={{mgr2_netmask}}
+   --prop:nsx_gateway_0={{mgr2_gw}}
+   --prop:nsx_dns1_0={{dns}}
+   --prop:nsx_domain_0={{domain}}
+   --prop:nsx_ntp_0={{ntp}}
+   --prop:nsx_isSSHEnabled=True
+   --prop:nsx_allowSSHRootLogin=True
+   --prop:nsx_passwd_0={{passwd}}
+   --prop:nsx_cli_passwd_0={{passwd}}
+   --prop:nsx_hostname={{mgr2_vmname}}
+   {{mgr_filename}}
+   vi://{{vc_cred}}@{{vc}}/{{datacenter}}/host/{{cluster}}
+
+
+- name: deploy controller 1
+  command: ovftool 
+   --name={{ctr1_hostname}}
+   --X:injectOvfEnv 
+   --X:logFile=ovftool.log 
+   --allowExtraConfig
+   --datastore={{ds}}
+   --network="VM Network"
+   --acceptAllEulas
+   --noSSLVerify
+   --diskMode=thin 
+   --powerOn 
+   --prop:nsx_ip_0={{ctr1_ip}} 
+   --prop:nsx_netmask_0={{ctr1_netmask}}
+   --prop:nsx_gateway_0={{ctr1_gw}} 
+   --prop:nsx_dns1_0={{dns}} 
+   --prop:nsx_domain_0={{domain}}
+   --prop:nsx_ntp_0={{ntp}} 
+   --prop:nsx_isSSHEnabled=True 
+   --prop:nsx_allowSSHRootLogin=True 
+   --prop:nsx_passwd_0={{passwd}}
+   --prop:nsx_cli_passwd_0={{passwd}} 
+   --prop:nsx_hostname={{ctr1_vmname}}
+   {{ctr_filename}}
+   vi://{{vc_cred}}@{{vc}}/{{datacenter}}/host/{{cluster}}
+
+- name: deploy controller 2
+  command: ovftool
+   --name={{ctr2_hostname}}
+   --X:injectOvfEnv
+   --X:logFile=ovftool.log
+   --allowExtraConfig
+   --datastore={{ds}}
+   --network="VM Network"
+   --acceptAllEulas
+   --noSSLVerify
+   --diskMode=thin
+   --powerOn
+   --prop:nsx_ip_0={{ctr2_ip}}
+   --prop:nsx_netmask_0={{ctr2_netmask}}
+   --prop:nsx_gateway_0={{ctr2_gw}}
+   --prop:nsx_dns1_0={{dns}}
+   --prop:nsx_domain_0={{domain}}
+   --prop:nsx_ntp_0={{ntp}}
+   --prop:nsx_isSSHEnabled=True
+   --prop:nsx_allowSSHRootLogin=True
+   --prop:nsx_passwd_0={{passwd}}
+   --prop:nsx_cli_passwd_0={{passwd}}
+   --prop:nsx_hostname={{ctr2_vmname}}
+   {{ctr_filename}}
+   vi://{{vc_cred}}@{{vc}}/{{datacenter}}/host/{{cluster}}
+
+- name: deploy controller 3
+  command: ovftool
+   --name={{ctr3_hostname}}
+   --X:injectOvfEnv
+   --X:logFile=ovftool.log
+   --allowExtraConfig
+   --datastore={{ds}}
+   --network="VM Network"
+   --acceptAllEulas
+   --noSSLVerify
+   --diskMode=thin
+   --powerOn
+   --prop:nsx_ip_0={{ctr3_ip}}
+   --prop:nsx_netmask_0={{ctr3_netmask}}
+   --prop:nsx_gateway_0={{ctr3_gw}}
+   --prop:nsx_dns1_0={{dns}}
+   --prop:nsx_domain_0={{domain}}
+   --prop:nsx_ntp_0={{ntp}}
+   --prop:nsx_isSSHEnabled=True
+   --prop:nsx_allowSSHRootLogin=True
+   --prop:nsx_passwd_0={{passwd}}
+   --prop:nsx_cli_passwd_0={{passwd}}
+   --prop:nsx_hostname={{ctr3_vmname}}
+   {{ctr_filename}}
+   vi://{{vc_cred}}@{{vc}}/{{datacenter}}/host/{{cluster}}
+
